@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>零售电商 AI 岗位专项深度分析 | 2026年4月</title>
+<style>
+  :root {
+    --primary: #e74c3c;
+    --primary-dark: #c0392b;
+    --secondary: #f39c12;
+    --accent: #3498db;
+    --bg: #fafafa;
+    --card-bg: #ffffff;
+    --text: #2c3e50;
+    --text-light: #7f8c8d;
+    --border: #ecf0f1;
+    --success: #27ae60;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+    --gradient-1: linear-gradient(135deg, #e74c3c, #f39c12);
+    --gradient-2: linear-gradient(135deg, #3498db, #2ecc71);
+    --gradient-3: linear-gradient(135deg, #9b59b6, #e74c3c);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 60px 0 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .hero h1 {
+    font-size: 2.4em;
+    font-weight: 800;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .hero h1 .emoji { font-size: 1.1em; }
+
+  .hero .subtitle {
+    font-size: 1.1em;
+    opacity: 0.85;
+    position: relative;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 0.85em;
+    margin-top: 16px;
+    position: relative;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Stats Bar */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: -30px auto 30px;
+    padding: 0 24px;
+    max-width: 1200px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .stat-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+  }
+
+  .stat-card:hover { transform: translateY(-3px); }
+
+  .stat-card .number {
+    font-size: 2em;
+    font-weight: 800;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .stat-card .label {
+    font-size: 0.85em;
+    color: var(--text-light);
+    margin-top: 4px;
+  }
+
+  /* Section */
+  .section {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 24px;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    border: 1px solid var(--border);
+  }
+
+  .card-title {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Job Category Grid */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+  }
+
+  .category-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  }
+
+  .category-header {
+    padding: 20px 24px;
+    color: white;
+    position: relative;
+  }
+
+  .category-header h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .category-header .count {
+    font-size: 0.85em;
+    opacity: 0.9;
+  }
+
+  .category-body {
+    padding: 20px 24px;
+  }
+
+  .category-body .job-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .category-body .job-item:last-child { border-bottom: none; }
+
+  .job-item .job-name {
+    font-size: 0.9em;
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .job-item .job-salary {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: var(--danger);
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+
+  /* Competency Model */
+  .competency-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+  }
+
+  .competency-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+  }
+
+  .competency-card .role-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .role-header .role-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+  }
+
+  .role-header .role-info h4 {
+    font-size: 1.05em;
+    font-weight: 700;
+  }
+
+  .role-header .role-info .salary-range {
+    font-size: 0.82em;
+    color: var(--danger);
+    font-weight: 600;
+  }
+
+  .skill-group {
+    margin-bottom: 14px;
+  }
+
+  .skill-group-title {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .skill-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+
+  .skill-tag.core {
+    background: #ffeaea;
+    color: #c0392b;
+    border: 1px solid #f5c6cb;
+  }
+
+  .skill-tag.tech {
+    background: #e8f4fd;
+    color: #2980b9;
+    border: 1px solid #bee5eb;
+  }
+
+  .skill-tag.soft {
+    background: #eafaf1;
+    color: #27ae60;
+    border: 1px solid #c3e6cb;
+  }
+
+  .skill-tag.ai {
+    background: #f5eef8;
+    color: #8e44ad;
+    border: 1px solid #d4b9e2;
+  }
+
+  .skill-tag.plus {
+    background: #fef9e7;
+    color: #d4ac0d;
+    border: 1px solid #f9e79f;
+  }
+
+  /* Bar Chart */
+  .bar-chart {
+    margin: 16px 0;
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .bar-label {
+    width: 140px;
+    font-size: 0.85em;
+    font-weight: 500;
+    text-align: right;
+    padding-right: 14px;
+    flex-shrink: 0;
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 28px;
+    background: #f0f0f0;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: white;
+    transition: width 0.8s ease;
+    min-width: 60px;
+  }
+
+  .bar-value {
+    margin-left: 10px;
+    font-size: 0.82em;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+
+  /* Radar / Heatmap Table */
+  .heatmap-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+    font-size: 0.85em;
+  }
+
+  .heatmap-table th {
+    padding: 10px 8px;
+    text-align: center;
+    font-weight: 600;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .heatmap-table td {
+    padding: 10px 8px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
+  .heatmap-table .row-header {
+    text-align: left;
+    font-weight: 600;
+    background: #f8f9fa;
+    padding-left: 14px;
+    min-width: 120px;
+  }
+
+  .heat-5 { background: #e74c3c; color: white; }
+  .heat-4 { background: #f39c12; color: white; }
+  .heat-3 { background: #f1c40f; color: #333; }
+  .heat-2 { background: #82e0aa; color: #333; }
+  .heat-1 { background: #d5f5e3; color: #666; }
+  .heat-0 { background: #f8f9fa; color: #bbb; }
+
+  /* Salary Table */
+  .salary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88em;
+  }
+
+  .salary-table th {
+    padding: 12px 14px;
+    text-align: left;
+    background: #f8f9fa;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .salary-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .salary-table tr:hover td {
+    background: #fef9f4;
+  }
+
+  .salary-highlight {
+    color: var(--danger);
+    font-weight: 700;
+  }
+
+  /* Timeline */
+  .career-path {
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .path-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    position: relative;
+    padding-left: 60px;
+  }
+
+  .path-step::before {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 36px;
+    width: 2px;
+    height: calc(100% + 8px);
+    background: var(--border);
+  }
+
+  .path-step:last-child::before { display: none; }
+
+  .path-number {
+    position: absolute;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .path-content {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    flex: 1;
+  }
+
+  .path-content h4 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .path-content .path-salary {
+    font-size: 0.82em;
+    color: var(--danger);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .path-content p {
+    font-size: 0.85em;
+    color: var(--text-light);
+  }
+
+  /* Insight Box */
+  .insight-box {
+    background: linear-gradient(135deg, #fef9e7, #fdebd0);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin: 16px 0;
+    border-left: 4px solid var(--secondary);
+  }
+
+  .insight-box .insight-title {
+    font-weight: 700;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .insight-box p {
+    font-size: 0.88em;
+    color: #5d4e37;
+    line-height: 1.7;
+  }
+
+  /* Trend Box */
+  .trend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .trend-card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .trend-card .trend-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .trend-card h4 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .trend-card p {
+    font-size: 0.85em;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-light);
+    font-size: 0.82em;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* Back Link */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover { color: white; }
+
+  /* Summary Grid */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+  }
+
+  .summary-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
+
+  .summary-item .summary-icon {
+    font-size: 1.5em;
+  }
+
+  .summary-item .summary-text {
+    font-size: 0.88em;
+    line-height: 1.5;
+  }
+
+  .summary-item .summary-text strong {
+    display: block;
+    font-size: 1.05em;
+    margin-bottom: 2px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 1.6em; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .category-grid { grid-template-columns: 1fr; }
+    .competency-section { grid-template-columns: 1fr; }
+    .bar-label { width: 100px; font-size: 0.78em; }
+    .heatmap-table { font-size: 0.75em; }
+    .path-step { padding-left: 50px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; 返回报告索引</a>
+    <h1><span class="emoji">&#x1F6D2;</span> 零售电商 AI 岗位专项深度分析</h1>
+    <p class="subtitle">21个真实招聘岗位 &times; 6大岗位类别 &times; 完整能力素质模型</p>
+    <div class="badge">&#x1F4C5; 数据来源：智联招聘 + 行业调研 | 2026年4月</div>
+  </div>
+</div>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stat-card">
+    <div class="number">21</div>
+    <div class="label">分析岗位总数</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">6</div>
+    <div class="label">岗位大类</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">4K-25K</div>
+    <div class="label">月薪范围</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">71%</div>
+    <div class="label">要求1-3年经验</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">52%</div>
+    <div class="label">大专即可</div>
+  </div>
+</div>
+
+<!-- Section 1: Executive Summary -->
+<div class="section">
+  <div class="section-title">
+    <span class="icon" style="background:#eaf2f8;">&#x1F4CB;</span>
+    一、行业概览与核心发现
+  </div>
+  <div class="card">
+    <p style="font-size:0.95em;margin-bottom:16px;">
+      基于智联招聘2026年4月最新数据，电商行业的AI岗位呈现<strong>爆发式增长</strong>。不同于互联网和金融行业对高学历（硕士+）和深度技术的要求，<strong>零售电商AI岗位的核心特征是「工具化」和「实战化」</strong>——企业需要的不是研发AI的人，而是<strong>会用AI提效的人</strong>。
+    </p>
+
+    <div class="summary-grid">
+      <div class="summary-item">
+        <span class="summary-icon">&#x1F3AF;</span>
+        <div class="summary-text">
+          <strong>设计类岗位占比最高</strong>
+          7个岗位（33%），是最大需求方向
+        </div>
+      </div>
+      <div class="summary-item">
+        <span class="summary-icon">&#x1F4B0;</span>
+        <div class="summary-text">
+          <strong>平均月薪 11,000 元</strong>
+          产品经理方向薪资天花板最高
+        </div>
+      </div>
+      <div class="summary-item">
+        <span class="summary-icon">&#x1F680;</span>
+        <div class="summary-text">
+          <strong>跨境电商是新增长极</strong>
+          独立站+TikTok是高薪方向
+        </div>
+      </div>
+      <div class="summary-item">
+        <span class="summary-icon">&#x1F916;</span>
+        <div class="summary-text">
+          <strong>AI工具>AI开发</strong>
+          80%岗位要求会用AI，非开发AI
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2: Job Categories -->
+<div class="section">
+  <div class="section-title">
+    <span class="icon" style="background:#fef5e7;">&#x1F4CA;</span>
+    二、六大岗位类别详解
+  </div>
+
+  <div class="category-grid">
+    <!-- Category 1: Design -->
+    <div class="category-card">
+      <div class="category-header" style="background:linear-gradient(135deg,#e74c3c,#f39c12);">
+        <h3>&#x1F3A8; AI视觉设计类</h3>
+        <div class="count">7个岗位 | 占比 33%</div>
+      </div>
+      <div class="category-body">
+        <div class="job-item">
+          <span class="job-name">AI电商设计师</span>
+          <span class="job-salary">8K-15K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">AI电商美工</span>
+          <span class="job-salary">6K-8K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">AI电商视觉设计师</span>
+          <span class="job-salary">10K-15K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">（AI）电商美工设计师</span>
+          <span class="job-salary">8K-11K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">资深电商设计师/AI视觉设计师</span>
+          <span class="job-salary">8K-16K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">电商AI设计师</span>
+          <span class="job-salary">10K-15K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">电商美工+AI视频制作专员</span>
+          <span class="job-salary">8K-10K</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 2: Operations -->
+    <div class="category-card">
+      <div class="category-header" style="background:linear-gradient(135deg,#3498db,#2ecc71);">
+        <h3>&#x1F4E6; AI电商运营类</h3>
+        <div class="count">4个岗位 | 占比 19%</div>
+      </div>
+      <div class="category-body">
+        <div class="job-item">
+          <span class="job-name">AI电商运营</span>
+          <span class="job-salary">4K-8K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">AI电商运营岗</span>
+          <span class="job-salary">8K-12K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">电商运营（AI方向）</span>
+          <span class="job-salary">6K-10K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">电商流程与AI效能经理</span>
+          <span class="job-salary">13K-18K</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 3: Product -->
+    <div class="category-card">
+      <div class="category-header" style="background:linear-gradient(135deg,#9b59b6,#e74c3c);">
+        <h3>&#x1F4DD; AI产品经理类</h3>
+        <div class="count">2个岗位 | 占比 10%</div>
+      </div>
+      <div class="category-body">
+        <div class="job-item">
+          <span class="job-name">AI产品经理/电商C端</span>
+          <span class="job-salary">11K-20K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">电商AI产品经理</span>
+          <span class="job-salary">15K-25K</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 4: Training -->
+    <div class="category-card">
+      <div class="category-header" style="background:linear-gradient(135deg,#1abc9c,#16a085);">
+        <h3>&#x1F9D1;&#x200D;&#x1F3EB; AI训练与培训类</h3>
+        <div class="count">3个岗位 | 占比 14%</div>
+      </div>
+      <div class="category-body">
+        <div class="job-item">
+          <span class="job-name">电商AI训练师/培训师</span>
+          <span class="job-salary">6K-10K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">电商AI客服训练师</span>
+          <span class="job-salary">10K-15K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">AI大模型训练师/电商生态链</span>
+          <span class="job-salary">10K-20K</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 5: Cross-border -->
+    <div class="category-card">
+      <div class="category-header" style="background:linear-gradient(135deg,#e67e22,#d35400);">
+        <h3>&#x1F30D; 跨境电商 AI 类</h3>
+        <div class="count">2个岗位 | 占比 10%</div>
+      </div>
+      <div class="category-body">
+        <div class="job-item">
+          <span class="job-name">Shopify独立站运营（AI电商方向）</span>
+          <span class="job-salary">12K-24K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">AI内容工具搭建师（跨境电商方向）</span>
+          <span class="job-salary">10K-15K</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 6: Technical / New -->
+    <div class="category-card">
+      <div class="category-header" style="background:linear-gradient(135deg,#2c3e50,#34495e);">
+        <h3>&#x26A1; 技术与新兴岗位</h3>
+        <div class="count">3个岗位 | 占比 14%</div>
+      </div>
+      <div class="category-body">
+        <div class="job-item">
+          <span class="job-name">AI电商数字人工程师</span>
+          <span class="job-salary">12K-24K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">AI电商视频编导</span>
+          <span class="job-salary">5K-8K</span>
+        </div>
+        <div class="job-item">
+          <span class="job-name">AI电商销售</span>
+          <span class="job-salary">11K-18K</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Competency Model -->
+<div class="section">
+  <div class="section-title">
+    <span class="icon" style="background:#f5eef8;">&#x1F9E0;</span>
+    三、各岗位能力素质模型（核心）
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-title">&#x1F4A1; 能力素质模型说明</div>
+    <p>以下模型基于21个真实招聘JD + 行业调研综合提炼。每个岗位的能力分为四层：<strong>&#x1F534; 核心专业能力</strong>（岗位必备的专业技能）、<strong>&#x1F535; AI工具能力</strong>（必须掌握的AI工具链）、<strong>&#x1F7E2; 通用软技能</strong>（人际和工作方法）、<strong>&#x1F7E1; 加分项</strong>（有则优先录用）。</p>
+  </div>
+
+  <div class="competency-section">
+
+    <!-- 1. AI视觉设计师 -->
+    <div class="competency-card">
+      <div class="role-header">
+        <div class="role-icon" style="background:linear-gradient(135deg,#e74c3c,#f39c12);">&#x1F3A8;</div>
+        <div class="role-info">
+          <h4>AI视觉设计师 / AI美工</h4>
+          <div class="salary-range">&#x1F4B0; 6K-16K | 7个岗位</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F534; 核心专业能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag core">电商主图/详情页设计</span>
+          <span class="skill-tag core">Banner/活动页视觉</span>
+          <span class="skill-tag core">包装设计能力</span>
+          <span class="skill-tag core">视觉构图与排版</span>
+          <span class="skill-tag core">品牌视觉体系理解</span>
+          <span class="skill-tag core">产品精修/商业修图</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F535; AI工具能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag ai">Midjourney</span>
+          <span class="skill-tag ai">Stable Diffusion</span>
+          <span class="skill-tag ai">DALL-E</span>
+          <span class="skill-tag ai">AI场景合成</span>
+          <span class="skill-tag ai">AI商品图生成</span>
+          <span class="skill-tag ai">Photoshop (AI功能)</span>
+          <span class="skill-tag ai">Illustrator</span>
+          <span class="skill-tag ai">CorelDRAW</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E2; 通用软技能</div>
+        <div class="skill-tags">
+          <span class="skill-tag soft">审美判断力</span>
+          <span class="skill-tag soft">快速迭代能力</span>
+          <span class="skill-tag soft">多平台适配意识</span>
+          <span class="skill-tag soft">跨部门沟通</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E1; 加分项</div>
+        <div class="skill-tags">
+          <span class="skill-tag plus">短视频剪辑(剪映/PR)</span>
+          <span class="skill-tag plus">3D建模/C4D</span>
+          <span class="skill-tag plus">小红书/抖音视觉风格</span>
+          <span class="skill-tag plus">IP形象设计</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. AI电商运营 -->
+    <div class="competency-card">
+      <div class="role-header">
+        <div class="role-icon" style="background:linear-gradient(135deg,#3498db,#2ecc71);">&#x1F4E6;</div>
+        <div class="role-info">
+          <h4>AI电商运营</h4>
+          <div class="salary-range">&#x1F4B0; 4K-18K | 4个岗位</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F534; 核心专业能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag core">店铺运营全链路</span>
+          <span class="skill-tag core">产品上架与优化</span>
+          <span class="skill-tag core">数据分析与报表</span>
+          <span class="skill-tag core">活动策划与执行</span>
+          <span class="skill-tag core">搜索排名/SEO优化</span>
+          <span class="skill-tag core">客户运营与复购</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F535; AI工具能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag ai">AI选品分析工具</span>
+          <span class="skill-tag ai">AI文案生成(ChatGPT等)</span>
+          <span class="skill-tag ai">AI数据分析(Python基础)</span>
+          <span class="skill-tag ai">AI客服机器人配置</span>
+          <span class="skill-tag ai">RPA自动化工具</span>
+          <span class="skill-tag ai">AI标题优化工具</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E2; 平台能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag tech">淘宝/天猫运营</span>
+          <span class="skill-tag tech">京东运营</span>
+          <span class="skill-tag tech">拼多多运营</span>
+          <span class="skill-tag tech">抖音电商</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E2; 通用软技能</div>
+        <div class="skill-tags">
+          <span class="skill-tag soft">数据敏感度</span>
+          <span class="skill-tag soft">市场洞察力</span>
+          <span class="skill-tag soft">跨部门协调</span>
+          <span class="skill-tag soft">复盘总结能力</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E1; 加分项</div>
+        <div class="skill-tags">
+          <span class="skill-tag plus">流程优化经验</span>
+          <span class="skill-tag plus">供应链管理认知</span>
+          <span class="skill-tag plus">Python/SQL数据处理</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. AI产品经理 -->
+    <div class="competency-card">
+      <div class="role-header">
+        <div class="role-icon" style="background:linear-gradient(135deg,#9b59b6,#e74c3c);">&#x1F4DD;</div>
+        <div class="role-info">
+          <h4>电商AI产品经理</h4>
+          <div class="salary-range">&#x1F4B0; 11K-25K | 2个岗位</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F534; 核心专业能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag core">产品规划与路线图</span>
+          <span class="skill-tag core">需求分析与PRD撰写</span>
+          <span class="skill-tag core">电商全链路AI产品设计</span>
+          <span class="skill-tag core">用户体验设计</span>
+          <span class="skill-tag core">竞品分析与市场研究</span>
+          <span class="skill-tag core">项目管理与推动落地</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F535; AI工具能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag ai">大模型产品设计</span>
+          <span class="skill-tag ai">AIGC产品集成</span>
+          <span class="skill-tag ai">AI推荐系统理解</span>
+          <span class="skill-tag ai">智能客服系统设计</span>
+          <span class="skill-tag ai">AI搜索与个性化</span>
+          <span class="skill-tag ai">Prompt Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E2; 通用软技能</div>
+        <div class="skill-tags">
+          <span class="skill-tag soft">逻辑思维能力</span>
+          <span class="skill-tag soft">跨团队协作</span>
+          <span class="skill-tag soft">商业思维</span>
+          <span class="skill-tag soft">技术沟通能力</span>
+          <span class="skill-tag soft">数据驱动决策</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E1; 加分项</div>
+        <div class="skill-tags">
+          <span class="skill-tag plus">C端电商经验</span>
+          <span class="skill-tag plus">AI Agent理解</span>
+          <span class="skill-tag plus">供应链/仓储数字化</span>
+          <span class="skill-tag plus">国际化电商经验</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. AI训练师 -->
+    <div class="competency-card">
+      <div class="role-header">
+        <div class="role-icon" style="background:linear-gradient(135deg,#1abc9c,#16a085);">&#x1F9D1;&#x200D;&#x1F3EB;</div>
+        <div class="role-info">
+          <h4>电商AI训练师 / 培训师</h4>
+          <div class="salary-range">&#x1F4B0; 6K-20K | 3个岗位</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F534; 核心专业能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag core">AI模型训练与调优</span>
+          <span class="skill-tag core">数据标注策略设计</span>
+          <span class="skill-tag core">标注方法优化</span>
+          <span class="skill-tag core">电商场景知识库搭建</span>
+          <span class="skill-tag core">AI客服对话设计</span>
+          <span class="skill-tag core">效果评测与AB测试</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F535; AI工具能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag ai">ChatGPT/大模型API</span>
+          <span class="skill-tag ai">Python基础编程</span>
+          <span class="skill-tag ai">OpenAI API调用</span>
+          <span class="skill-tag ai">标注平台工具</span>
+          <span class="skill-tag ai">Java基础(部分要求)</span>
+          <span class="skill-tag ai">Prompt工程</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E2; 通用软技能</div>
+        <div class="skill-tags">
+          <span class="skill-tag soft">电商业务理解</span>
+          <span class="skill-tag soft">文本分析能力</span>
+          <span class="skill-tag soft">培训授课能力</span>
+          <span class="skill-tag soft">耐心与细致</span>
+          <span class="skill-tag soft">持续学习能力</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E1; 加分项</div>
+        <div class="skill-tags">
+          <span class="skill-tag plus">NLP/自然语言处理基础</span>
+          <span class="skill-tag plus">电商客服经验</span>
+          <span class="skill-tag plus">SFT/RLHF训练经验</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. 跨境电商AI -->
+    <div class="competency-card">
+      <div class="role-header">
+        <div class="role-icon" style="background:linear-gradient(135deg,#e67e22,#d35400);">&#x1F30D;</div>
+        <div class="role-info">
+          <h4>跨境电商AI运营/工具师</h4>
+          <div class="salary-range">&#x1F4B0; 10K-24K | 2个岗位</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F534; 核心专业能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag core">独立站搭建与运营</span>
+          <span class="skill-tag core">跨境平台运营(亚马逊/TikTok)</span>
+          <span class="skill-tag core">红人营销/KOL合作</span>
+          <span class="skill-tag core">海外社媒运营</span>
+          <span class="skill-tag core">多语言内容策略</span>
+          <span class="skill-tag core">跨境支付与物流认知</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F535; AI工具能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag ai">AI多语言翻译与本地化</span>
+          <span class="skill-tag ai">AI内容批量生成</span>
+          <span class="skill-tag ai">AI选品与市场分析</span>
+          <span class="skill-tag ai">Shopify/WordPress</span>
+          <span class="skill-tag ai">AI SEO优化工具</span>
+          <span class="skill-tag ai">AI广告素材生成</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E2; 通用软技能</div>
+        <div class="skill-tags">
+          <span class="skill-tag soft">英语流利(读写)</span>
+          <span class="skill-tag soft">跨文化沟通</span>
+          <span class="skill-tag soft">自驱力与独立工作</span>
+          <span class="skill-tag soft">数据分析思维</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E1; 加分项</div>
+        <div class="skill-tags">
+          <span class="skill-tag plus">Google Ads/Meta Ads经验</span>
+          <span class="skill-tag plus">TikTok Shop运营</span>
+          <span class="skill-tag plus">小语种能力</span>
+          <span class="skill-tag plus">DTC品牌经验</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. 技术与新兴 -->
+    <div class="competency-card">
+      <div class="role-header">
+        <div class="role-icon" style="background:linear-gradient(135deg,#2c3e50,#34495e);">&#x26A1;</div>
+        <div class="role-info">
+          <h4>AI数字人/视频编导/AI销售</h4>
+          <div class="salary-range">&#x1F4B0; 5K-24K | 3个岗位</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F534; 核心专业能力（按方向）</div>
+        <div class="skill-tags">
+          <span class="skill-tag core">数字人形象定制(工程师)</span>
+          <span class="skill-tag core">大模型驱动数字人(工程师)</span>
+          <span class="skill-tag core">短视频脚本策划(编导)</span>
+          <span class="skill-tag core">拍摄与剪辑(编导)</span>
+          <span class="skill-tag core">企业客户开发(销售)</span>
+          <span class="skill-tag core">AI SaaS产品演示(销售)</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F535; AI工具能力</div>
+        <div class="skill-tags">
+          <span class="skill-tag ai">数字人生成平台</span>
+          <span class="skill-tag ai">AI视频剪辑工具</span>
+          <span class="skill-tag ai">AI Agents(销售)</span>
+          <span class="skill-tag ai">大模型API集成(工程师)</span>
+          <span class="skill-tag ai">AI脚本/文案生成</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E2; 通用软技能</div>
+        <div class="skill-tags">
+          <span class="skill-tag soft">创意思维(编导)</span>
+          <span class="skill-tag soft">客户沟通(销售)</span>
+          <span class="skill-tag soft">抗压能力(销售)</span>
+          <span class="skill-tag soft">技术攻关能力(工程师)</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">&#x1F7E1; 加分项</div>
+        <div class="skill-tags">
+          <span class="skill-tag plus">直播经验</span>
+          <span class="skill-tag plus">电商行业人脉</span>
+          <span class="skill-tag plus">TTS/语音合成</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 4: Competency Heatmap -->
+<div class="section">
+  <div class="section-title">
+    <span class="icon" style="background:#eaf2f8;">&#x1F525;</span>
+    四、能力要求热力图：各岗位 &times; 能力维度
+  </div>
+
+  <div class="card" style="overflow-x:auto;">
+    <p style="font-size:0.85em;color:var(--text-light);margin-bottom:14px;">&#x2B50; 评分说明：5=核心必备 | 4=强烈要求 | 3=推荐具备 | 2=有帮助 | 1=偶尔涉及 | 0=不要求</p>
+    <table class="heatmap-table">
+      <thead>
+        <tr>
+          <th style="min-width:130px;">能力维度</th>
+          <th>视觉设计</th>
+          <th>电商运营</th>
+          <th>产品经理</th>
+          <th>AI训练师</th>
+          <th>跨境电商</th>
+          <th>数字人/编导</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-header">电商平台操作</td>
+          <td class="heat-3">3</td>
+          <td class="heat-5">5</td>
+          <td class="heat-4">4</td>
+          <td class="heat-3">3</td>
+          <td class="heat-4">4</td>
+          <td class="heat-2">2</td>
+        </tr>
+        <tr>
+          <td class="row-header">AI图像生成</td>
+          <td class="heat-5">5</td>
+          <td class="heat-2">2</td>
+          <td class="heat-2">2</td>
+          <td class="heat-1">1</td>
+          <td class="heat-3">3</td>
+          <td class="heat-4">4</td>
+        </tr>
+        <tr>
+          <td class="row-header">AI文案/内容生成</td>
+          <td class="heat-3">3</td>
+          <td class="heat-4">4</td>
+          <td class="heat-3">3</td>
+          <td class="heat-4">4</td>
+          <td class="heat-5">5</td>
+          <td class="heat-4">4</td>
+        </tr>
+        <tr>
+          <td class="row-header">数据分析</td>
+          <td class="heat-1">1</td>
+          <td class="heat-5">5</td>
+          <td class="heat-5">5</td>
+          <td class="heat-3">3</td>
+          <td class="heat-4">4</td>
+          <td class="heat-1">1</td>
+        </tr>
+        <tr>
+          <td class="row-header">Prompt工程</td>
+          <td class="heat-4">4</td>
+          <td class="heat-3">3</td>
+          <td class="heat-4">4</td>
+          <td class="heat-5">5</td>
+          <td class="heat-4">4</td>
+          <td class="heat-3">3</td>
+        </tr>
+        <tr>
+          <td class="row-header">Python/编程</td>
+          <td class="heat-0">0</td>
+          <td class="heat-2">2</td>
+          <td class="heat-2">2</td>
+          <td class="heat-4">4</td>
+          <td class="heat-1">1</td>
+          <td class="heat-3">3</td>
+        </tr>
+        <tr>
+          <td class="row-header">大模型/API</td>
+          <td class="heat-1">1</td>
+          <td class="heat-1">1</td>
+          <td class="heat-4">4</td>
+          <td class="heat-5">5</td>
+          <td class="heat-2">2</td>
+          <td class="heat-4">4</td>
+        </tr>
+        <tr>
+          <td class="row-header">视觉设计软件</td>
+          <td class="heat-5">5</td>
+          <td class="heat-1">1</td>
+          <td class="heat-1">1</td>
+          <td class="heat-0">0</td>
+          <td class="heat-2">2</td>
+          <td class="heat-3">3</td>
+        </tr>
+        <tr>
+          <td class="row-header">SEO/搜索优化</td>
+          <td class="heat-1">1</td>
+          <td class="heat-4">4</td>
+          <td class="heat-3">3</td>
+          <td class="heat-1">1</td>
+          <td class="heat-5">5</td>
+          <td class="heat-1">1</td>
+        </tr>
+        <tr>
+          <td class="row-header">英语能力</td>
+          <td class="heat-0">0</td>
+          <td class="heat-0">0</td>
+          <td class="heat-1">1</td>
+          <td class="heat-1">1</td>
+          <td class="heat-5">5</td>
+          <td class="heat-0">0</td>
+        </tr>
+        <tr>
+          <td class="row-header">项目管理</td>
+          <td class="heat-2">2</td>
+          <td class="heat-3">3</td>
+          <td class="heat-5">5</td>
+          <td class="heat-2">2</td>
+          <td class="heat-3">3</td>
+          <td class="heat-2">2</td>
+        </tr>
+        <tr>
+          <td class="row-header">商业/用户思维</td>
+          <td class="heat-2">2</td>
+          <td class="heat-4">4</td>
+          <td class="heat-5">5</td>
+          <td class="heat-2">2</td>
+          <td class="heat-4">4</td>
+          <td class="heat-3">3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Section 5: Salary Analysis -->
+<div class="section">
+  <div class="section-title">
+    <span class="icon" style="background:#fdebd0;">&#x1F4B0;</span>
+    五、薪资结构分析
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#x1F4CA; 各类别薪资对比</div>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <span class="bar-label">AI产品经理</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:85%;background:linear-gradient(90deg,#9b59b6,#e74c3c);">11K-25K</div>
+        </div>
+        <span class="bar-value">均值 17.8K</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">跨境电商AI</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:76%;background:linear-gradient(90deg,#e67e22,#d35400);">10K-24K</div>
+        </div>
+        <span class="bar-value">均值 15.3K</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">AI训练师</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:62%;background:linear-gradient(90deg,#1abc9c,#16a085);">6K-20K</div>
+        </div>
+        <span class="bar-value">均值 11.8K</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">技术与新兴</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:58%;background:linear-gradient(90deg,#2c3e50,#34495e);">5K-24K</div>
+        </div>
+        <span class="bar-value">均值 11.2K</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">AI视觉设计</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:52%;background:linear-gradient(90deg,#e74c3c,#f39c12);">6K-16K</div>
+        </div>
+        <span class="bar-value">均值 10.4K</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">AI电商运营</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:45%;background:linear-gradient(90deg,#3498db,#2ecc71);">4K-18K</div>
+        </div>
+        <span class="bar-value">均值 9.9K</span>
+      </div>
+    </div>
+
+    <div class="insight-box" style="margin-top:20px;">
+      <div class="insight-title">&#x1F4A1; 薪资洞察</div>
+      <p><strong>产品经理</strong>是薪资天花板最高的方向（最高25K），但要求3-5年经验和本科以上学历。<strong>跨境电商AI</strong>是性价比最高的赛道——大专学历、1-3年经验就能拿到12K-24K，因为跨境人才稀缺。而<strong>AI设计师</strong>虽然岗位最多，但薪资中位数偏低（10K左右），内卷程度较高。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#x1F4CB; 完整岗位薪资明细</div>
+    <div style="overflow-x:auto;">
+      <table class="salary-table">
+        <thead>
+          <tr>
+            <th>岗位名称</th>
+            <th>月薪范围</th>
+            <th>经验要求</th>
+            <th>学历</th>
+            <th>城市</th>
+            <th>公司</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>电商AI产品经理</td>
+            <td class="salary-highlight">15K-25K</td>
+            <td>3-5年</td>
+            <td>本科</td>
+            <td>天津</td>
+            <td>圣西琳食品</td>
+          </tr>
+          <tr>
+            <td>Shopify独立站运营</td>
+            <td class="salary-highlight">12K-24K</td>
+            <td>1-3年</td>
+            <td>大专</td>
+            <td>深圳</td>
+            <td>燊界智联科技</td>
+          </tr>
+          <tr>
+            <td>AI电商数字人工程师</td>
+            <td class="salary-highlight">12K-24K</td>
+            <td>5-10年</td>
+            <td>硕士</td>
+            <td>郑州</td>
+            <td>克酒科技</td>
+          </tr>
+          <tr>
+            <td>AI产品经理/电商C端</td>
+            <td class="salary-highlight">11K-20K</td>
+            <td>3-5年</td>
+            <td>本科</td>
+            <td>深圳</td>
+            <td>外企德科</td>
+          </tr>
+          <tr>
+            <td>AI电商销售</td>
+            <td class="salary-highlight">11K-18K</td>
+            <td>不限</td>
+            <td>大专</td>
+            <td>上海/北京/广州</td>
+            <td>探迹科技</td>
+          </tr>
+          <tr>
+            <td>AI大模型训练师</td>
+            <td class="salary-highlight">10K-20K</td>
+            <td>1-3年</td>
+            <td>本科</td>
+            <td>合肥</td>
+            <td>泰盈信息</td>
+          </tr>
+          <tr>
+            <td>电商AI客服训练师</td>
+            <td class="salary-highlight">10K-15K</td>
+            <td>1-3年</td>
+            <td>本科</td>
+            <td>北京</td>
+            <td>卓华尔科技</td>
+          </tr>
+          <tr>
+            <td>AI内容工具搭建师</td>
+            <td class="salary-highlight">10K-15K</td>
+            <td>3-5年</td>
+            <td>本科</td>
+            <td>福州</td>
+            <td>传丞数字科技</td>
+          </tr>
+          <tr>
+            <td>AI电商视觉设计师</td>
+            <td>10K-15K</td>
+            <td>1-3年</td>
+            <td>大专</td>
+            <td>长沙</td>
+            <td>皇凯品牌</td>
+          </tr>
+          <tr>
+            <td>电商AI设计师</td>
+            <td>10K-15K</td>
+            <td>1-3年</td>
+            <td>大专</td>
+            <td>杭州</td>
+            <td>奥亦信息</td>
+          </tr>
+          <tr>
+            <td>电商流程与AI效能经理</td>
+            <td>13K-18K</td>
+            <td>3-5年</td>
+            <td>本科</td>
+            <td>南京</td>
+            <td>源恩工贸</td>
+          </tr>
+          <tr>
+            <td>AI电商运营岗</td>
+            <td>8K-12K</td>
+            <td>1-3年</td>
+            <td>本科</td>
+            <td>苏州</td>
+            <td>中懿文旅</td>
+          </tr>
+          <tr>
+            <td>AI电商设计师</td>
+            <td>8K-15K</td>
+            <td>1-3年</td>
+            <td>本科</td>
+            <td>郑州</td>
+            <td>网商园</td>
+          </tr>
+          <tr>
+            <td>（AI）电商美工设计师</td>
+            <td>8K-11K</td>
+            <td>1-3年</td>
+            <td>大专</td>
+            <td>杭州</td>
+            <td>兮羽电商</td>
+          </tr>
+          <tr>
+            <td>资深电商设计师/AI视觉</td>
+            <td>8K-16K</td>
+            <td>1-3年</td>
+            <td>大专</td>
+            <td>武汉</td>
+            <td>春月堂传媒</td>
+          </tr>
+          <tr>
+            <td>电商美工+AI视频制作</td>
+            <td>8K-10K</td>
+            <td>1-3年</td>
+            <td>大专</td>
+            <td>东莞</td>
+            <td>意达米面</td>
+          </tr>
+          <tr>
+            <td>电商AI训练师/培训师</td>
+            <td>6K-10K</td>
+            <td>1-3年</td>
+            <td>本科</td>
+            <td>石家庄</td>
+            <td>牧狼人商贸</td>
+          </tr>
+          <tr>
+            <td>AI电商美工</td>
+            <td>6K-8K</td>
+            <td>不限</td>
+            <td>大专</td>
+            <td>深圳</td>
+            <td>盛世欣兴格力</td>
+          </tr>
+          <tr>
+            <td>电商运营（AI方向）</td>
+            <td>6K-10K</td>
+            <td>不限</td>
+            <td>本科</td>
+            <td>无锡</td>
+            <td>百橙新材料</td>
+          </tr>
+          <tr>
+            <td>AI电商视频编导</td>
+            <td>5K-8K</td>
+            <td>1年以下</td>
+            <td>本科</td>
+            <td>西安</td>
+            <td>如期而至网络</td>
+          </tr>
+          <tr>
+            <td>AI电商运营</td>
+            <td>4K-8K</td>
+            <td>1-3年</td>
+            <td>大专</td>
+            <td>漯河</td>
+            <td>商联医药</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Section 6: Career Path -->
+<div class="section">
+  <div class="section-title">
+    <span class="icon" style="background:#eafaf1;">&#x1F3C6;</span>
+    六、职业发展路径建议
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#x1F4C8; 电商AI岗位晋升路线</div>
+
+    <div class="career-path">
+      <div class="path-step">
+        <div class="path-number" style="background:linear-gradient(135deg,#3498db,#2ecc71);">1</div>
+        <div class="path-content">
+          <h4>入门期：AI电商美工 / AI运营助理</h4>
+          <div class="path-salary">4K-10K | 0-1年经验</div>
+          <p>掌握AI工具基础（Midjourney/ChatGPT），熟悉1-2个电商平台操作。重点是<strong>用AI提升现有工作效率</strong>，把传统技能和AI结合。</p>
+        </div>
+      </div>
+
+      <div class="path-step">
+        <div class="path-number" style="background:linear-gradient(135deg,#f39c12,#e67e22);">2</div>
+        <div class="path-content">
+          <h4>成长期：AI电商设计师 / AI运营专员 / AI训练师</h4>
+          <div class="path-salary">8K-16K | 1-3年经验</div>
+          <p>精通AI工具全链路，能<strong>独立用AI完成从创意到执行的闭环</strong>。设计方向深耕AI视觉工作流，运营方向掌握AI数据分析，训练师方向学习Prompt Engineering和模型调优。</p>
+        </div>
+      </div>
+
+      <div class="path-step">
+        <div class="path-number" style="background:linear-gradient(135deg,#e74c3c,#c0392b);">3</div>
+        <div class="path-content">
+          <h4>进阶期：电商AI产品经理 / 跨境AI运营 / AI效能经理</h4>
+          <div class="path-salary">12K-25K | 3-5年经验</div>
+          <p>从「执行」转向「规划」。产品经理需要设计AI产品方案，效能经理需要优化组织AI工作流，跨境方向需要<strong>AI+国际化双重能力</strong>。这是薪资增长最快的阶段。</p>
+        </div>
+      </div>
+
+      <div class="path-step">
+        <div class="path-number" style="background:linear-gradient(135deg,#8e44ad,#9b59b6);">4</div>
+        <div class="path-content">
+          <h4>资深期：AI电商负责人 / 数字化转型总监</h4>
+          <div class="path-salary">25K-50K+ | 5年以上</div>
+          <p>带领团队完成电商业务的<strong>全面AI化转型</strong>。需要具备战略规划、团队管理、供应链数字化、AI技术选型等综合能力。未来2-3年将大量涌现此类高管岗位。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 7: Trends -->
+<div class="section">
+  <div class="section-title">
+    <span class="icon" style="background:#f5eef8;">&#x1F52E;</span>
+    七、2026趋势预判：电商AI岗位未来走向
+  </div>
+
+  <div class="trend-grid">
+    <div class="trend-card">
+      <div class="trend-icon">&#x1F4F1;</div>
+      <h4>AI直播将成标配</h4>
+      <p>数字人直播带货正从试水走向规模化。预计2026下半年，「AI直播运营」将成为独立岗位，薪资12K-20K起步。需要掌握数字人定制、话术训练、互动策略。</p>
+    </div>
+    <div class="trend-card">
+      <div class="trend-icon">&#x1F30F;</div>
+      <h4>跨境AI岗位薪资将大幅上涨</h4>
+      <p>TikTok Shop + Temu + SHEIN的全球扩张，使跨境电商AI人才极度稀缺。会用AI做多语言内容+独立站运营的复合型人才，薪资溢价将达30-50%。</p>
+    </div>
+    <div class="trend-card">
+      <div class="trend-icon">&#x1F916;</div>
+      <h4>AI Agent将重构客服与运营</h4>
+      <p>电商AI Agent（自主完成售前咨询、售后处理、订单跟踪）将在2026年大规模落地，催生「AI Agent运营师」新岗位，融合AI训练+客服+运营三重技能。</p>
+    </div>
+    <div class="trend-card">
+      <div class="trend-icon">&#x1F3A8;</div>
+      <h4>AI设计师将两极分化</h4>
+      <p>简单商品图生成被AI自动化后，低端美工岗位会收缩。但「AI创意总监」——能用AI工具输出高级品牌视觉的人才——将成为抢手资源，薪资可达20K-30K。</p>
+    </div>
+    <div class="trend-card">
+      <div class="trend-icon">&#x1F4CA;</div>
+      <h4>数据+AI运营成为高薪方向</h4>
+      <p>单纯的运营+AI文案生成门槛越来越低。能同时做「AI数据分析 + AI内容生成 + 自动化工作流搭建」的全栈运营，将是企业最愿意出高薪的对象。</p>
+    </div>
+    <div class="trend-card">
+      <div class="trend-icon">&#x1F393;</div>
+      <h4>学历门槛持续降低</h4>
+      <p>电商AI岗位的实战导向使得学历不再是硬门槛（52%大专即可）。AI作品集、实操案例、工具熟练度将成为比学历更重要的评估标准。「会干活」比「有文凭」更有价值。</p>
+    </div>
+  </div>
+</div>
+
+<!-- Section 8: Key Takeaways -->
+<div class="section">
+  <div class="section-title">
+    <span class="icon" style="background:#fef5e7;">&#x1F3AF;</span>
+    八、核心结论与建议
+  </div>
+
+  <div class="card">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;">
+      <div style="padding:20px;background:#fef5e7;border-radius:14px;">
+        <h4 style="margin-bottom:10px;">&#x1F4A1; 对求职者</h4>
+        <ul style="font-size:0.88em;padding-left:20px;line-height:2;">
+          <li><strong>最快入行路径：</strong>AI美工/AI运营助理，大专即可，0-1年经验</li>
+          <li><strong>最高性价比方向：</strong>跨境电商AI，大专+英语+AI工具=12K-24K</li>
+          <li><strong>最高薪资天花板：</strong>电商AI产品经理，25K+，需要3-5年沉淀</li>
+          <li><strong>最具成长性方向：</strong>AI训练师，连接技术与业务的桥梁角色</li>
+          <li><strong>核心竞争力公式：</strong>电商实战 + AI工具熟练度 + 数据思维</li>
+        </ul>
+      </div>
+      <div style="padding:20px;background:#eaf2f8;border-radius:14px;">
+        <h4 style="margin-bottom:10px;">&#x1F3E2; 对企业</h4>
+        <ul style="font-size:0.88em;padding-left:20px;line-height:2;">
+          <li><strong>最值得投入的岗位：</strong>AI效能经理，能提升全团队AI使用率</li>
+          <li><strong>性价比最高的方案：</strong>让现有运营/设计团队学习AI工具</li>
+          <li><strong>需要抢人的方向：</strong>跨境电商AI人才，供不应求</li>
+          <li><strong>可以观望的方向：</strong>AI数字人工程师，技术仍在快速迭代</li>
+          <li><strong>建议：</strong>优先招「懂电商+会用AI」而非「懂AI+不懂电商」</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>&#x1F4CB; 零售电商 AI 岗位专项深度分析报告</p>
+  <p>数据来源：智联招聘 + 行业公开信息 | 样本量：21个真实岗位 + 行业调研</p>
+  <p>生成时间：2026年4月2日 | <a href="index.html">返回报告索引</a></p>
+</div>
+
+</body>
+</html>
