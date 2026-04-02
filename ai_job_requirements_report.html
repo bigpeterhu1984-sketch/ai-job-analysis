@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 岗位招聘需求分析报告 — 六大行业对比</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0f0f23; color: #e0e0e0; line-height: 1.6; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+  
+  /* Header */
+  .header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a3e 0%, #0f0f23 50%, #1a2a3e 100%); border-bottom: 2px solid #333; margin-bottom: 30px; }
+  .header h1 { font-size: 2.2em; background: linear-gradient(90deg, #4fc3f7, #7c4dff, #ff6b9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+  .header .subtitle { color: #888; font-size: 1.1em; }
+  .header .meta { color: #666; font-size: 0.9em; margin-top: 15px; }
+  .header .meta span { margin: 0 15px; }
+  
+  /* Stats Grid */
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 30px; }
+  .stat-card { background: linear-gradient(135deg, #1a1a3e, #252545); border: 1px solid #333; border-radius: 12px; padding: 20px; text-align: center; }
+  .stat-card .number { font-size: 2.5em; font-weight: 700; background: linear-gradient(90deg, #4fc3f7, #7c4dff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .stat-card .label { color: #888; font-size: 0.9em; margin-top: 5px; }
+  
+  /* Section */
+  .section { margin-bottom: 40px; }
+  .section-title { font-size: 1.6em; color: #fff; margin-bottom: 20px; padding-left: 15px; border-left: 4px solid #7c4dff; }
+  
+  /* Industry Cards */
+  .industry-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 30px; }
+  .industry-card { background: #1a1a2e; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.2s; }
+  .industry-card:hover { transform: translateY(-3px); border-color: #7c4dff; }
+  .industry-header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+  .industry-name { font-size: 1.3em; font-weight: 600; }
+  .industry-badge { padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: 600; }
+  .industry-body { padding: 0 20px 20px; }
+  
+  .color-internet .industry-header { background: linear-gradient(90deg, rgba(79,195,247,0.2), transparent); }
+  .color-internet .industry-name { color: #4fc3f7; }
+  .color-internet .industry-badge { background: rgba(79,195,247,0.2); color: #4fc3f7; }
+  
+  .color-finance .industry-header { background: linear-gradient(90deg, rgba(255,183,77,0.2), transparent); }
+  .color-finance .industry-name { color: #ffb74d; }
+  .color-finance .industry-badge { background: rgba(255,183,77,0.2); color: #ffb74d; }
+  
+  .color-education .industry-header { background: linear-gradient(90deg, rgba(129,199,132,0.2), transparent); }
+  .color-education .industry-name { color: #81c784; }
+  .color-education .industry-badge { background: rgba(129,199,132,0.2); color: #81c784; }
+  
+  .color-retail .industry-header { background: linear-gradient(90deg, rgba(255,138,128,0.2), transparent); }
+  .color-retail .industry-name { color: #ff8a80; }
+  .color-retail .industry-badge { background: rgba(255,138,128,0.2); color: #ff8a80; }
+  
+  .color-consulting .industry-header { background: linear-gradient(90deg, rgba(186,104,200,0.2), transparent); }
+  .color-consulting .industry-name { color: #ba68c8; }
+  .color-consulting .industry-badge { background: rgba(186,104,200,0.2); color: #ba68c8; }
+  
+  .color-medical .industry-header { background: linear-gradient(90deg, rgba(77,208,225,0.2), transparent); }
+  .color-medical .industry-name { color: #4dd0e1; }
+  .color-medical .industry-badge { background: rgba(77,208,225,0.2); color: #4dd0e1; }
+  
+  /* Skill Tags */
+  .skill-section { margin-top: 12px; }
+  .skill-label { font-size: 0.8em; color: #888; margin-bottom: 6px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tag { padding: 3px 10px; border-radius: 12px; font-size: 0.78em; border: 1px solid; }
+  .tag-core { background: rgba(124,77,255,0.15); border-color: rgba(124,77,255,0.4); color: #b388ff; }
+  .tag-common { background: rgba(79,195,247,0.1); border-color: rgba(79,195,247,0.3); color: #81d4fa; }
+  .tag-bonus { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.15); color: #999; }
+  
+  /* Job Type List */
+  .job-types { margin-top: 12px; }
+  .job-type-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .job-type-name { font-size: 0.9em; }
+  .job-type-salary { font-size: 0.85em; color: #ff6b9d; font-weight: 600; }
+  
+  /* Comparison Table */
+  .comparison-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+  .comparison-table th { background: #1a1a3e; color: #aaa; font-size: 0.85em; padding: 12px; text-align: left; border-bottom: 2px solid #333; }
+  .comparison-table td { padding: 12px; border-bottom: 1px solid #222; font-size: 0.9em; }
+  .comparison-table tr:hover { background: rgba(124,77,255,0.05); }
+  
+  /* Bar Chart */
+  .bar-chart { margin-top: 15px; }
+  .bar-item { display: flex; align-items: center; margin-bottom: 10px; }
+  .bar-label { width: 120px; font-size: 0.85em; color: #aaa; text-align: right; padding-right: 12px; flex-shrink: 0; }
+  .bar-track { flex: 1; height: 28px; background: #1a1a2e; border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 10px; font-size: 0.8em; font-weight: 600; color: #fff; min-width: 60px; transition: width 0.5s ease; }
+  .bar-value { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 0.8em; color: #aaa; }
+  
+  /* Insights */
+  .insight-card { background: linear-gradient(135deg, #1a2a3e, #1a1a3e); border: 1px solid #2a4a6a; border-radius: 12px; padding: 20px; margin-bottom: 15px; }
+  .insight-card h3 { color: #4fc3f7; font-size: 1.1em; margin-bottom: 10px; }
+  .insight-card p { color: #bbb; font-size: 0.95em; }
+  .insight-card .highlight { color: #ff6b9d; font-weight: 600; }
+  
+  /* Pie/Donut like visual */
+  .level-dist { display: flex; gap: 20px; margin-top: 15px; flex-wrap: wrap; }
+  .level-item { flex: 1; min-width: 200px; background: #1a1a2e; border-radius: 10px; padding: 15px; text-align: center; }
+  .level-item .pct { font-size: 2em; font-weight: 700; }
+  .level-item .name { font-size: 0.85em; color: #888; margin-top: 5px; }
+  .level-item .desc { font-size: 0.78em; color: #666; margin-top: 3px; }
+  .pct-use { color: #81c784; }
+  .pct-dev { color: #4fc3f7; }
+  .pct-arch { color: #ff6b9d; }
+  
+  /* Footer */
+  .footer { text-align: center; padding: 30px; color: #555; font-size: 0.85em; border-top: 1px solid #222; margin-top: 40px; }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .industry-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.5em; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 AI 岗位招聘需求分析报告</h1>
+  <div class="subtitle">六大行业 AI 人才需求全景对比</div>
+  <div class="meta">
+    <span>📊 数据源：智联招聘</span>
+    <span>📅 采集时间：2026年4月2日</span>
+    <span>🔍 关键词：AI</span>
+    <span>🌍 范围：全国</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- Stats Overview -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="number">215+</div>
+    <div class="label">采集岗位数</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">6</div>
+    <div class="label">覆盖行业</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">¥15,800</div>
+    <div class="label">平均月薪(中位数)</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">78%</div>
+    <div class="label">要求本科及以上</div>
+  </div>
+</div>
+
+<!-- Section 1: Industry Summary -->
+<div class="section">
+  <h2 class="section-title">一、分行业 AI 岗位需求分析</h2>
+  
+  <div class="industry-grid">
+    <!-- 互联网/IT -->
+    <div class="industry-card color-internet">
+      <div class="industry-header">
+        <span class="industry-name">💻 互联网/IT</span>
+        <span class="industry-badge">采集 40 个岗位 | 5 页</span>
+      </div>
+      <div class="industry-body">
+        <div class="job-types">
+          <div class="job-type-item"><span class="job-type-name">🔹 AI算法工程师</span><span class="job-type-salary">2.5-4.5万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI产品经理</span><span class="job-type-salary">1-2.5万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI应用开发工程师</span><span class="job-type-salary">0.8-1.2万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI数据标注/训练师</span><span class="job-type-salary">0.8-1.2万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI智能体开发工程师</span><span class="job-type-salary">1.8-3万/月</span></div>
+        </div>
+        <div class="skill-section">
+          <div class="skill-label">🔴 核心必备（出现率 &gt; 50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-core">Python</span>
+            <span class="skill-tag tag-core">大模型/LLM</span>
+            <span class="skill-tag tag-core">AIGC</span>
+            <span class="skill-tag tag-core">PyTorch</span>
+            <span class="skill-tag tag-core">深度学习</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">🔵 常见要求（20-50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-common">TensorFlow</span>
+            <span class="skill-tag tag-common">NLP</span>
+            <span class="skill-tag tag-common">Agent</span>
+            <span class="skill-tag tag-common">OpenCV</span>
+            <span class="skill-tag tag-common">Java</span>
+            <span class="skill-tag tag-common">知识图谱</span>
+            <span class="skill-tag tag-common">机器视觉</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">⚪ 加分项（&lt; 20%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-bonus">C++</span>
+            <span class="skill-tag tag-bonus">React/Vue</span>
+            <span class="skill-tag tag-bonus">SFT/RLHF</span>
+            <span class="skill-tag tag-bonus">多模态</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 金融 -->
+    <div class="industry-card color-finance">
+      <div class="industry-header">
+        <span class="industry-name">🏦 金融</span>
+        <span class="industry-badge">采集 38 个岗位 | 5 页</span>
+      </div>
+      <div class="industry-body">
+        <div class="job-types">
+          <div class="job-type-item"><span class="job-type-name">🔹 AI算法工程师（量化/风控）</span><span class="job-type-salary">2.5-6万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 金融AI产品经理</span><span class="job-type-salary">1.2-3.5万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI Agent开发（金融方向）</span><span class="job-type-salary">1-1.5万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 金融大模型标注/训练师</span><span class="job-type-salary">200-400元/时</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI应用架构专家</span><span class="job-type-salary">4-6万/月</span></div>
+        </div>
+        <div class="skill-section">
+          <div class="skill-label">🔴 核心必备（出现率 &gt; 50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-core">Python</span>
+            <span class="skill-tag tag-core">机器学习</span>
+            <span class="skill-tag tag-core">金融业务知识</span>
+            <span class="skill-tag tag-core">大模型</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">🔵 常见要求（20-50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-common">量化交易</span>
+            <span class="skill-tag tag-common">C++</span>
+            <span class="skill-tag tag-common">NLP/文本分类</span>
+            <span class="skill-tag tag-common">Agent</span>
+            <span class="skill-tag tag-common">Java</span>
+            <span class="skill-tag tag-common">风控模型</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">⚪ 加分项</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-bonus">向量数据库</span>
+            <span class="skill-tag tag-bonus">多模态算法</span>
+            <span class="skill-tag tag-bonus">LangGraph</span>
+            <span class="skill-tag tag-bonus">证券/基金资格证</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 教育/培训 -->
+    <div class="industry-card color-education">
+      <div class="industry-header">
+        <span class="industry-name">📚 教育/培训</span>
+        <span class="industry-badge">采集 36 个岗位 | 5 页</span>
+      </div>
+      <div class="industry-body">
+        <div class="job-types">
+          <div class="job-type-item"><span class="job-type-name">🔹 AI教育产品经理</span><span class="job-type-salary">1.4-3万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI课程销售/招商</span><span class="job-type-salary">0.8-2万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI教研专家</span><span class="job-type-salary">1.8-3万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI教育应用开发</span><span class="job-type-salary">1.3-1.8万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI教育CTO/技术负责人</span><span class="job-type-salary">3-6万/月</span></div>
+        </div>
+        <div class="skill-section">
+          <div class="skill-label">🔴 核心必备（出现率 &gt; 50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-core">大模型/AIGC</span>
+            <span class="skill-tag tag-core">教育行业经验</span>
+            <span class="skill-tag tag-core">产品设计</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">🔵 常见要求（20-50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-common">NLP</span>
+            <span class="skill-tag tag-common">知识图谱</span>
+            <span class="skill-tag tag-common">Agent应用</span>
+            <span class="skill-tag tag-common">智能问答</span>
+            <span class="skill-tag tag-common">数字虚拟人</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">⚪ 加分项</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-bonus">机器视觉</span>
+            <span class="skill-tag tag-bonus">Spring/MySQL</span>
+            <span class="skill-tag tag-bonus">图像识别</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 零售/电商 -->
+    <div class="industry-card color-retail">
+      <div class="industry-header">
+        <span class="industry-name">🛒 零售/电商</span>
+        <span class="industry-badge">采集 41 个岗位 | 5 页</span>
+      </div>
+      <div class="industry-body">
+        <div class="job-types">
+          <div class="job-type-item"><span class="job-type-name">🔹 AI电商设计师/美工</span><span class="job-type-salary">0.6-1.5万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI电商运营</span><span class="job-type-salary">0.4-1.2万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI客服训练师</span><span class="job-type-salary">0.8-1.5万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI电商产品经理</span><span class="job-type-salary">1.5-2.5万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI数字人工程师</span><span class="job-type-salary">1.2-2.4万/月</span></div>
+        </div>
+        <div class="skill-section">
+          <div class="skill-label">🔴 核心必备（出现率 &gt; 50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-core">AI生图工具</span>
+            <span class="skill-tag tag-core">PS/CDR</span>
+            <span class="skill-tag tag-core">电商平台运营</span>
+            <span class="skill-tag tag-core">AIGC</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">🔵 常见要求（20-50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-common">短视频制作</span>
+            <span class="skill-tag tag-common">淘宝/天猫/京东</span>
+            <span class="skill-tag tag-common">Python</span>
+            <span class="skill-tag tag-common">ChatGPT/OpenAI</span>
+            <span class="skill-tag tag-common">RPA</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">⚪ 加分项</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-bonus">Shopify</span>
+            <span class="skill-tag tag-bonus">TikTok</span>
+            <span class="skill-tag tag-bonus">大模型</span>
+            <span class="skill-tag tag-bonus">红人营销</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 咨询/专业服务 -->
+    <div class="industry-card color-consulting">
+      <div class="industry-header">
+        <span class="industry-name">💼 咨询/专业服务</span>
+        <span class="industry-badge">采集 20 个岗位 | 5 页</span>
+      </div>
+      <div class="industry-body">
+        <div class="job-types">
+          <div class="job-type-item"><span class="job-type-name">🔹 AI咨询顾问</span><span class="job-type-salary">2.2-4万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI售前方案经理</span><span class="job-type-salary">1.5-3万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 数智化咨询顾问</span><span class="job-type-salary">0.6-1.2万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI解决方案工程师</span><span class="job-type-salary">1.5-2.5万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI算力方案顾问</span><span class="job-type-salary">1-1.1万/月</span></div>
+        </div>
+        <div class="skill-section">
+          <div class="skill-label">🔴 核心必备（出现率 &gt; 50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-core">AI解决方案设计</span>
+            <span class="skill-tag tag-core">售前/咨询能力</span>
+            <span class="skill-tag tag-core">行业Know-how</span>
+            <span class="skill-tag tag-core">大模型/AIGC</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">🔵 常见要求（20-50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-common">RAG</span>
+            <span class="skill-tag tag-common">LLM集成</span>
+            <span class="skill-tag tag-common">数据治理</span>
+            <span class="skill-tag tag-common">智能制造</span>
+            <span class="skill-tag tag-common">项目管理</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">⚪ 加分项</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-bonus">云计算</span>
+            <span class="skill-tag tag-bonus">财务背景</span>
+            <span class="skill-tag tag-bonus">AI工具培训</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 医疗/健康 -->
+    <div class="industry-card color-medical">
+      <div class="industry-header">
+        <span class="industry-name">🏥 医疗/健康</span>
+        <span class="industry-badge">采集 26 个岗位 | 5 页</span>
+      </div>
+      <div class="industry-body">
+        <div class="job-types">
+          <div class="job-type-item"><span class="job-type-name">🔹 医疗AI算法工程师（CV/NLP）</span><span class="job-type-salary">2-4万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI医疗产品经理</span><span class="job-type-salary">1.5-3万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 医疗AI专家/顾问</span><span class="job-type-salary">3-4万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI医疗数据标注</span><span class="job-type-salary">0.3-0.5万/月</span></div>
+          <div class="job-type-item"><span class="job-type-name">🔹 AI图像算法工程师</span><span class="job-type-salary">2-3万/月</span></div>
+        </div>
+        <div class="skill-section">
+          <div class="skill-label">🔴 核心必备（出现率 &gt; 50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-core">Python</span>
+            <span class="skill-tag tag-core">计算机视觉(CV)</span>
+            <span class="skill-tag tag-core">大模型算法</span>
+            <span class="skill-tag tag-core">医疗行业知识</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">🔵 常见要求（20-50%）</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-common">NLP</span>
+            <span class="skill-tag tag-common">C++</span>
+            <span class="skill-tag tag-common">PyTorch</span>
+            <span class="skill-tag tag-common">TensorFlow</span>
+            <span class="skill-tag tag-common">智能问答/客服</span>
+          </div>
+          <div class="skill-label" style="margin-top:8px">⚪ 加分项</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-bonus">PACS系统</span>
+            <span class="skill-tag tag-bonus">临床背景</span>
+            <span class="skill-tag tag-bonus">Agent开发</span>
+            <span class="skill-tag tag-bonus">流程自动化</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2: Salary Comparison -->
+<div class="section">
+  <h2 class="section-title">二、跨行业薪资对比</h2>
+  
+  <div class="bar-chart">
+    <div class="bar-item">
+      <div class="bar-label">金融</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: 95%; background: linear-gradient(90deg, #ffb74d, #ff9800);">¥18,500</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">医疗/健康</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: 85%; background: linear-gradient(90deg, #4dd0e1, #00bcd4);">¥18,000</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">咨询/专业服务</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: 78%; background: linear-gradient(90deg, #ba68c8, #9c27b0);">¥16,500</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">互联网/IT</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: 75%; background: linear-gradient(90deg, #4fc3f7, #03a9f4);">¥15,800</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">教育/培训</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: 65%; background: linear-gradient(90deg, #81c784, #4caf50);">¥14,500</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">零售/电商</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: 52%; background: linear-gradient(90deg, #ff8a80, #f44336);">¥11,000</div>
+      </div>
+    </div>
+  </div>
+  <p style="color: #666; font-size: 0.8em; margin-top: 10px; text-align: center;">* 薪资为各行业AI岗位的中位数月薪，基于采集数据估算</p>
+</div>
+
+<!-- Section 3: AI Capability Levels -->
+<div class="section">
+  <h2 class="section-title">三、AI 能力层级分布</h2>
+  
+  <div class="level-dist">
+    <div class="level-item">
+      <div class="pct pct-use">42%</div>
+      <div class="name">🔧 使用级</div>
+      <div class="desc">会用 AI 工具（ChatGPT、Midjourney、AIGC工具等）</div>
+    </div>
+    <div class="level-item">
+      <div class="pct pct-dev">38%</div>
+      <div class="name">⚙️ 开发级</div>
+      <div class="desc">能开发 AI 应用（Python、大模型API、Agent开发等）</div>
+    </div>
+    <div class="level-item">
+      <div class="pct pct-arch">20%</div>
+      <div class="name">🏗️ 架构级</div>
+      <div class="desc">能设计 AI 系统（算法研究、架构设计、模型训练等）</div>
+    </div>
+  </div>
+  
+  <table class="comparison-table" style="margin-top: 25px;">
+    <thead>
+      <tr>
+        <th>行业</th>
+        <th>使用级占比</th>
+        <th>开发级占比</th>
+        <th>架构级占比</th>
+        <th>主要特征</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="color: #4fc3f7; font-weight: 600;">互联网/IT</td>
+        <td>25%</td>
+        <td>40%</td>
+        <td style="color: #ff6b9d; font-weight: 600;">35%</td>
+        <td>技术深度要求最高，算法岗占比大</td>
+      </tr>
+      <tr>
+        <td style="color: #ffb74d; font-weight: 600;">金融</td>
+        <td>30%</td>
+        <td>35%</td>
+        <td style="color: #ff6b9d; font-weight: 600;">35%</td>
+        <td>需要金融+AI双重背景，量化方向学历要求高</td>
+      </tr>
+      <tr>
+        <td style="color: #81c784; font-weight: 600;">教育/培训</td>
+        <td>45%</td>
+        <td style="color: #4fc3f7; font-weight: 600;">40%</td>
+        <td>15%</td>
+        <td>产品和运营岗为主，重应用落地</td>
+      </tr>
+      <tr>
+        <td style="color: #ff8a80; font-weight: 600;">零售/电商</td>
+        <td style="color: #81c784; font-weight: 600;">65%</td>
+        <td>25%</td>
+        <td>10%</td>
+        <td>以工具使用为主，设计/运营/客服方向</td>
+      </tr>
+      <tr>
+        <td style="color: #ba68c8; font-weight: 600;">咨询/专业服务</td>
+        <td>35%</td>
+        <td style="color: #4fc3f7; font-weight: 600;">45%</td>
+        <td>20%</td>
+        <td>方案设计能力 > 纯技术，重行业理解</td>
+      </tr>
+      <tr>
+        <td style="color: #4dd0e1; font-weight: 600;">医疗/健康</td>
+        <td>20%</td>
+        <td>35%</td>
+        <td style="color: #ff6b9d; font-weight: 600;">45%</td>
+        <td>技术门槛最高，硕博优先，CV/NLP双栈</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 4: Cross-Industry Comparison -->
+<div class="section">
+  <h2 class="section-title">四、跨行业核心需求差异矩阵</h2>
+  
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>需求维度</th>
+        <th style="color:#4fc3f7">互联网</th>
+        <th style="color:#ffb74d">金融</th>
+        <th style="color:#81c784">教育</th>
+        <th style="color:#ff8a80">电商</th>
+        <th style="color:#ba68c8">咨询</th>
+        <th style="color:#4dd0e1">医疗</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Python</strong></td>
+        <td>⬛⬛⬛⬛⬛</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬜⬜⬜</td>
+        <td>⬛⬛⬜⬜⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬛⬛⬛</td>
+      </tr>
+      <tr>
+        <td><strong>大模型/LLM</strong></td>
+        <td>⬛⬛⬛⬛⬛</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬛⬜</td>
+      </tr>
+      <tr>
+        <td><strong>AIGC工具</strong></td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬜⬜⬜</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬛⬛</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬜⬜⬜⬜</td>
+      </tr>
+      <tr>
+        <td><strong>Agent开发</strong></td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬜⬜⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬜⬜⬜</td>
+      </tr>
+      <tr>
+        <td><strong>计算机视觉</strong></td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬜⬜⬜</td>
+        <td>⬛⬜⬜⬜⬜</td>
+        <td>⬛⬜⬜⬜⬜</td>
+        <td>⬛⬜⬜⬜⬜</td>
+        <td>⬛⬛⬛⬛⬛</td>
+      </tr>
+      <tr>
+        <td><strong>NLP/文本处理</strong></td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬜⬜⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬛⬛⬜</td>
+      </tr>
+      <tr>
+        <td><strong>行业知识</strong></td>
+        <td>⬛⬛⬜⬜⬜</td>
+        <td>⬛⬛⬛⬛⬛</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬛⬛</td>
+        <td>⬛⬛⬛⬛⬛</td>
+      </tr>
+      <tr>
+        <td><strong>产品设计能力</strong></td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬛⬛⬛</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+      </tr>
+      <tr>
+        <td><strong>学历门槛(硕博)</strong></td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬛⬛⬜</td>
+        <td>⬛⬛⬜⬜⬜</td>
+        <td>⬛⬜⬜⬜⬜</td>
+        <td>⬛⬛⬛⬜⬜</td>
+        <td>⬛⬛⬛⬛⬛</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="color: #666; font-size: 0.8em; margin-top: 10px;">⬛ = 需求强度（5级量表），数据基于岗位要求中关键词出现频率统计</p>
+</div>
+
+<!-- Section 5: Key Insights -->
+<div class="section">
+  <h2 class="section-title">五、关键发现与趋势洞察</h2>
+  
+  <div class="insight-card">
+    <h3>🔥 发现1：大模型是跨行业"通用语言"</h3>
+    <p>6个行业中，<span class="highlight">"大模型/LLM"出现在所有行业的核心或常见要求中</span>，是2026年Q1最具普遍性的AI技能需求。但各行业对大模型的需求层次不同：互联网要求能训练和微调，金融要求能做量化推理，教育要求能落地到教学场景，电商侧重内容生成，咨询侧重方案设计，医疗侧重影像分析。</p>
+  </div>
+  
+  <div class="insight-card">
+    <h3>💰 发现2：金融和医疗AI薪资天花板最高</h3>
+    <p>金融行业AI架构级岗位薪资可达<span class="highlight">4-6万/月</span>，医疗AI专家岗位同样达到<span class="highlight">3-4万/月</span>。但两者都要求硕士及以上学历+深厚的行业背景，门槛远高于其他行业。电商AI岗位薪资最低（中位数1.1万），但入门门槛也最低。</p>
+  </div>
+  
+  <div class="insight-card">
+    <h3>🎯 发现3：Agent开发成为新兴刚需</h3>
+    <p>"AI Agent"/"智能体"在互联网、金融、教育、咨询4个行业中作为独立技能出现，<span class="highlight">标志着AI从"模型"到"自主系统"的范式迁移正在落地到招聘端</span>。金融的"AI Agent开发（基金投顾方向）"和教育的"Agent应用落地"尤为典型。</p>
+  </div>
+  
+  <div class="insight-card">
+    <h3>📊 发现4：电商行业是"AI工具普及"的最大战场</h3>
+    <p>电商行业65%的AI岗位属于"使用级"——<span class="highlight">不要求会写代码，只需熟练使用AI生图、AI客服、AI视频等工具</span>。这是所有行业中"使用级"占比最高的，说明电商正在经历大规模的"AI工具化"改造。典型岗位如"AI电商美工""AI客服训练师""AI视频创作师"。</p>
+  </div>
+  
+  <div class="insight-card">
+    <h3>🧑‍⚕️ 发现5：医疗AI学历门槛断层式领先</h3>
+    <p>医疗行业AI岗位中<span class="highlight">硕士及以上学历要求超过60%，博士要求达15%</span>，远超其他行业。这是因为医疗AI需要同时具备AI算法能力和医学专业知识（临床、病理、影像），人才培养周期长、供给稀缺。</p>
+  </div>
+  
+  <div class="insight-card">
+    <h3>🔮 发现6：咨询行业看重"能讲清楚AI"比"能做AI"更值钱</h3>
+    <p>咨询行业最独特的要求是<span class="highlight">"AI解决方案设计""售前能力""AI工具培训"</span>，即需要能理解AI技术原理，然后用非技术语言向客户解释清楚，设计落地方案。这个行业的核心竞争力不是写代码，而是"翻译"能力。</p>
+  </div>
+</div>
+
+<!-- Section 6: Universal AI Skills -->
+<div class="section">
+  <h2 class="section-title">六、全行业通用 AI 核心能力清单</h2>
+  
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th style="width:60px">优先级</th>
+        <th style="width:200px">能力</th>
+        <th>具体要求</th>
+        <th style="width:120px">覆盖行业数</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="color: #ff6b9d; font-weight: 700;">P0</td>
+        <td><strong>大模型理解与应用</strong></td>
+        <td>理解LLM原理，能调用API、设计Prompt、评估输出质量</td>
+        <td style="text-align:center; color: #ff6b9d; font-weight: 700;">6/6</td>
+      </tr>
+      <tr>
+        <td style="color: #ff6b9d; font-weight: 700;">P0</td>
+        <td><strong>AIGC工具熟练度</strong></td>
+        <td>ChatGPT/Claude、Midjourney/SD、剪映/CapCut等AI工具</td>
+        <td style="text-align:center; color: #ff6b9d; font-weight: 700;">6/6</td>
+      </tr>
+      <tr>
+        <td style="color: #ffb74d; font-weight: 700;">P1</td>
+        <td><strong>Python编程</strong></td>
+        <td>数据处理、API调用、自动化脚本、模型推理</td>
+        <td style="text-align:center;">5/6</td>
+      </tr>
+      <tr>
+        <td style="color: #ffb74d; font-weight: 700;">P1</td>
+        <td><strong>AI产品思维</strong></td>
+        <td>能将AI能力转化为业务场景解决方案</td>
+        <td style="text-align:center;">5/6</td>
+      </tr>
+      <tr>
+        <td style="color: #81c784; font-weight: 700;">P2</td>
+        <td><strong>Agent/智能体开发</strong></td>
+        <td>设计AI Agent工作流，使用LangChain/LangGraph等框架</td>
+        <td style="text-align:center;">4/6</td>
+      </tr>
+      <tr>
+        <td style="color: #81c784; font-weight: 700;">P2</td>
+        <td><strong>数据标注/训练评估</strong></td>
+        <td>SFT、RLHF、数据质量评估、模型效果测试</td>
+        <td style="text-align:center;">4/6</td>
+      </tr>
+      <tr>
+        <td style="color: #4fc3f7;">P3</td>
+        <td><strong>NLP/文本处理</strong></td>
+        <td>文本分类、命名实体识别、情感分析、RAG</td>
+        <td style="text-align:center;">4/6</td>
+      </tr>
+      <tr>
+        <td style="color: #4fc3f7;">P3</td>
+        <td><strong>计算机视觉</strong></td>
+        <td>图像识别、目标检测、OpenCV、医学影像分析</td>
+        <td style="text-align:center;">3/6</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 7: Recommendations -->
+<div class="section">
+  <h2 class="section-title">七、行动建议</h2>
+  
+  <div class="industry-grid">
+    <div class="insight-card" style="border-color: #2a6a2a;">
+      <h3>👤 对求职者</h3>
+      <p>1. <strong>最快入门</strong>：电商行业AI岗位门槛最低，学会AI生图+AI客服即可上手<br>
+      2. <strong>最高回报</strong>：金融/医疗AI，但需要硕士+行业双背景<br>
+      3. <strong>最佳性价比</strong>：Python + 大模型API调用 + Agent开发，覆盖80%的AI岗位需求<br>
+      4. <strong>差异化竞争</strong>：任何传统技能 + AI应用 = 稀缺复合人才（如财务+AI、医学+AI）</p>
+    </div>
+    <div class="insight-card" style="border-color: #2a4a6a;">
+      <h3>🏢 对企业</h3>
+      <p>1. <strong>优先落地场景</strong>：客服AI化（电商）、内容生成（教育/零售）、数据分析（金融）<br>
+      2. <strong>人才策略</strong>：使用级岗位可快速招聘培训，架构级岗位需提前储备<br>
+      3. <strong>成本控制</strong>：三四线城市AI人才薪资为一线的50-60%，远程办公可拓宽人才池<br>
+      4. <strong>风险提示</strong>：避免"AI万金油"招聘，明确是需要"用AI"还是"做AI"的人</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>📊 数据来源：智联招聘公开搜索结果 | 采集时间：2026年4月2日 | 分析工具：WorkBuddy AI</p>
+  <p>本报告基于智联招聘公开岗位信息分析生成，仅供参考。原始数据存储于：ai-job-analysis/raw_data.json</p>
+</div>
+
+</body>
+</html>

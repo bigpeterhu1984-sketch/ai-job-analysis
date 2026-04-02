@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "source": "智联招聘",
+    "search_time": "2026-04-02",
+    "keywords": ["AI 互联网", "AI 金融", "AI 教育", "AI 电商", "AI 咨询", "AI 医疗"],
+    "scope": "全国",
+    "total_jobs": 215
+  },
+  "industries": {
+    "互联网IT": {
+      "keyword": "AI 互联网",
+      "total_pages": 5,
+      "collected_pages": 2,
+      "jobs": [
+        {"title": "AI互联网广告销售", "salary": "8000-15000", "company": "河北盘古开物人工智能科技有限公司", "industry": "人工智能", "scale": "300-499人", "city": "保定", "exp": "1-3年", "edu": "大专", "skills": ["互联网广告", "搜索引擎广告", "KA大客户", "电话销售"]},
+        {"title": "Ai互联网设计（人工智能红利期）", "salary": "5000-10000", "company": "四川羽达豪顺电子商务有限公司", "industry": "电子商务", "scale": "20-99人", "city": "绵阳", "exp": "经验不限", "edu": "学历不限", "skills": ["UI设计", "PS", "AI"]},
+        {"title": "管培之星|AI互联网产品-26届春招", "salary": "15000-25000", "company": "东方财富", "industry": "互联网", "scale": "1000-9999人", "city": "北京/上海", "exp": "经验不限", "edu": "本科", "skills": ["金融产品", "大模型", "AIGC", "管理培训生"]},
+        {"title": "AI产品经理(外派互联网大厂)", "salary": "10000-13000", "company": "软通动力", "industry": "互联网", "scale": "10000人以上", "city": "北京", "exp": "1-3年", "edu": "本科", "skills": ["搜索", "大模型", "AIGC", "AI视频", "AI产品"]},
+        {"title": "AI互联网运营总裁", "salary": "50000-100000", "company": "艾莎(辽宁)企业管理咨询有限公司", "industry": "专业技术服务", "scale": "20人以下", "city": "北京", "exp": "10年以上", "edu": "硕士", "skills": ["联合创始人", "海外运营", "直播运营", "新媒体运营"]},
+        {"title": "AI产品经理（互联网&渠道）", "salary": "15000-20000", "company": "思特奇", "industry": "运营商/增值服务", "scale": "1000-9999人", "city": "北京", "exp": "经验不限", "edu": "硕士", "skills": ["大模型", "AIGC", "NLP", "知识图谱", "机器视觉"]},
+        {"title": "互联网应用研发岗（偏AI应用）", "salary": "15000-20000", "company": "中国信息通信研究院", "industry": "通信/网络设备", "scale": "1000-9999人", "city": "北京", "exp": "1年以下", "edu": "硕士", "skills": ["AI应用"]},
+        {"title": "ai算法工程师（互联网自研 双休）", "salary": "25000-35000", "company": "江苏猎宝网络科技股份有限公司", "industry": "游戏", "scale": "300-499人", "city": "南京", "exp": "1-3年", "edu": "本科", "skills": ["深度学习"]},
+        {"title": "互联网大厂-影视化场景AI数据专家-文本方向", "salary": "8000-12000", "company": "江苏成功企业管理有限公司", "industry": "人力资源服务", "scale": "1000-9999人", "city": "北京", "exp": "经验不限", "edu": "本科", "skills": ["文本标注", "视频标注"]},
+        {"title": "产品经理（AI大模型/通信互联网方向）", "salary": "10000-13000", "company": "深圳南区人瑞人力资源服务有限公司", "industry": "企业服务", "scale": "500-999人", "city": "广州", "exp": "3-5年", "edu": "本科", "skills": ["大模型"]},
+        {"title": "ai应用工程师（互联网 自研）", "salary": "25000-35000", "company": "江苏猎宝网络科技股份有限公司", "industry": "游戏", "scale": "300-499人", "city": "南京", "exp": "1-3年", "edu": "本科", "skills": ["AI应用"]},
+        {"title": "AI用户增长运营－互联网大厂", "salary": "8000-9000", "company": "外企德科", "industry": "人力资源服务", "scale": "10000人以上", "city": "杭州", "exp": "经验不限", "edu": "大专", "skills": ["用户增长", "会员体系", "AI产品", "内容运营"]},
+        {"title": "互联网大厂+AI训练数据专家（多模态/AI助手）", "salary": "8000-12000", "company": "江苏成功企业管理有限公司", "industry": "人力资源服务", "scale": "1000-9999人", "city": "北京", "exp": "1-3年", "edu": "本科", "skills": ["文本分析", "PyTorch", "SFT", "RM", "RL"]},
+        {"title": "ai负责人（互联网 自研 双休）", "salary": "35000-45000", "company": "江苏猎宝网络科技股份有限公司", "industry": "游戏", "scale": "300-499人", "city": "南京", "exp": "1-3年", "edu": "本科", "skills": ["AI负责人"]},
+        {"title": "央企AI智能体开发工程师（智能体互联网方向）", "salary": "23000-30000", "company": "智联猎头", "industry": "互联网", "scale": "10000人以上", "city": "青岛", "exp": "1-3年", "edu": "硕士", "skills": ["PyTorch", "TensorFlow", "Python", "人工神经网络"]},
+        {"title": "AI应用开发工程师（双休/五险一金）", "salary": "8000-12000", "company": "湖南橘光友人帐互联网科技有限公司", "industry": "互联网", "scale": "20-99人", "city": "长沙", "exp": "3-5年", "edu": "本科", "skills": ["TensorFlow", "PyTorch", "OpenCV", "Python", "C++", "Java"]},
+        {"title": "AI全栈开发工程师（双休/五险一金）", "salary": "8000-10000", "company": "湖南橘光友人帐互联网科技有限公司", "industry": "互联网", "scale": "20-99人", "city": "长沙", "exp": "3-5年", "edu": "本科", "skills": ["JavaScript", "React", "Vue", "Java", "Python"]},
+        {"title": "高级产品经理（互联网、AI）", "salary": "15000-25000", "company": "北京树猿网络科技有限公司", "industry": "互联网", "scale": "20-99人", "city": "北京", "exp": "5-10年", "edu": "本科", "skills": ["互联网产品", "AI"]},
+        {"title": "游戏评测专员/AI游戏/互联网大厂", "salary": "8000-9000", "company": "外企德科", "industry": "人力资源服务", "scale": "10000人以上", "city": "杭州", "exp": "1-3年", "edu": "本科", "skills": ["手游测试", "APP测试"]}
+      ]
+    },
+    "金融": {
+      "keyword": "AI 金融",
+      "total_pages": 5,
+      "collected_pages": 2,
+      "jobs": [
+        {"title": "C++开发工程师（AI金融项目组）", "salary": "30000-60000", "company": "知名研究院", "industry": "互联网", "scale": "500-999人", "city": "深圳", "exp": "经验不限", "edu": "硕士", "skills": ["C++"]},
+        {"title": "AI金融助理", "salary": "10000-20000", "company": "中国平安人寿保险", "industry": "保险", "scale": "10000人以上", "city": "贵阳", "exp": "1-3年", "edu": "大专", "skills": []},
+        {"title": "量化AI/金融模型工程师（金融量化方向）", "salary": "12000-22000", "company": "青岛威瑞富泰能源有限公司", "industry": "贸易/进出口", "scale": "20-99人", "city": "杭州", "exp": "3-5年", "edu": "硕士", "skills": ["期货研究", "量化策略", "Python", "量化交易"]},
+        {"title": "ai模型标注-金融方向", "salary": "45元/天", "company": "法本信息技术", "industry": "计算机软件", "scale": "1000-9999人", "city": "多城市", "exp": "经验不限", "edu": "本科", "skills": ["文本标注", "精算师", "税务师"]},
+        {"title": "金融AI Agent开发(后台开发/基金投顾方向)", "salary": "10000-15000", "company": "华创证券", "industry": "证券/期货", "scale": "1000-9999人", "city": "上海", "exp": "经验不限", "edu": "本科", "skills": ["Agent", "基金投顾"]},
+        {"title": "AI算法工程师（金融或信贷领域）", "salary": "14000-16000", "company": "外企德科", "industry": "人力资源服务", "scale": "500-999人", "city": "济南", "exp": "3-5年", "edu": "硕士", "skills": ["机器学习"]},
+        {"title": "AI应用架构与开发专家（金融企业级）", "salary": "40000-60000", "company": "北京一种生活互联网信息服务", "industry": "IT服务", "scale": "20人以下", "city": "深圳", "exp": "3-5年", "edu": "本科", "skills": ["AI项目", "TO B金融项目"]},
+        {"title": "AI大模型NLP工程师（金融/量化方向）", "salary": "12000-22000", "company": "青岛威瑞富泰能源有限公司", "industry": "贸易/进出口", "scale": "20-99人", "city": "杭州", "exp": "3-5年", "edu": "硕士", "skills": ["序列标注", "文本分类", "Python", "量化交易", "向量数据库"]},
+        {"title": "金融科技助理（AI投研方向）", "salary": "6000-10000", "company": "北京盈和智投资管理中心", "industry": "证券/期货", "scale": "20-99人", "city": "北京", "exp": "经验不限", "edu": "本科", "skills": ["私募基金", "AI"]},
+        {"title": "高级Java AI/Agent金融软件开发", "salary": "12000-13000", "company": "上海薪合信息科技有限公司", "industry": "计算机软件", "scale": "100-299人", "city": "上海", "exp": "5-10年", "edu": "本科", "skills": ["Python", "MySQL", "Redis", "Java", "微服务架构", "AGENT"]},
+        {"title": "金融ai训练师（居家线上长期兼职）", "salary": "200-400元/时", "company": "法本信息技术", "industry": "计算机软件", "scale": "1000-9999人", "city": "北京", "exp": "经验不限", "edu": "博士", "skills": ["证券从业资格", "基金从业资格", "金融大模型评测"]},
+        {"title": "金融行业AI产品经理", "salary": "12000-20000", "company": "广州中科易德科技有限公司", "industry": "计算机软件", "scale": "20-99人", "city": "广州", "exp": "3-5年", "edu": "本科", "skills": ["大模型", "金融AI产品"]},
+        {"title": "金融科技委员会-AI算法岗", "salary": "30000-60000", "company": "中信期货有限公司", "industry": "证券/期货", "scale": "1000-9999人", "city": "上海", "exp": "3-5年", "edu": "硕士", "skills": ["机器学习", "C++", "Python"]},
+        {"title": "ai数据标注（金融方向）", "salary": "6000-8000", "company": "支付宝(杭州)数字服务技术", "industry": "互联网", "scale": "10000人以上", "city": "重庆", "exp": "3-5年", "edu": "大专", "skills": ["文本标注", "视频标注"]},
+        {"title": "金融领域AI律师", "salary": "10000-20000", "company": "江苏立泰律师事务所", "industry": "咨询服务", "scale": "20-99人", "city": "苏州", "exp": "1-3年", "edu": "本科", "skills": ["诉讼"]},
+        {"title": "AI产品经理", "salary": "20000-35000", "company": "江西金融发展集团", "industry": "证券/期货", "scale": "500-999人", "city": "深圳", "exp": "3-5年", "edu": "硕士", "skills": ["AIGC", "智能机器人"]},
+        {"title": "AI算法工程师", "salary": "25000-40000", "company": "恒银金融科技", "industry": "人工智能", "scale": "1000-9999人", "city": "天津", "exp": "3-5年", "edu": "本科", "skills": ["视觉图像算法"]},
+        {"title": "AI算法岗", "salary": "25000-30000", "company": "兴业消费金融", "industry": "银行", "scale": "1000-9999人", "city": "上海", "exp": "经验不限", "edu": "本科", "skills": []},
+        {"title": "AI应用开发工程师", "salary": "20000-25000", "company": "深圳前海华强金融控股", "industry": "投资/融资", "scale": "20-99人", "city": "深圳", "exp": "3-5年", "edu": "本科", "skills": ["大模型算法", "多模态算法", "LANGGRAPH", "AUTOCHAIN"]}
+      ]
+    },
+    "教育培训": {
+      "keyword": "AI 教育",
+      "total_pages": 5,
+      "collected_pages": 2,
+      "jobs": [
+        {"title": "AI教育运营经理", "salary": "12000-18000", "company": "河南趣趣山谷教育科技", "industry": "培训/辅导服务", "scale": "100-299人", "city": "鹤壁", "exp": "3-5年", "edu": "大专", "skills": ["用户运营", "产品运营", "AI教育融合", "园所运营管理"]},
+        {"title": "产品经理-AI教育", "salary": "15000-20000", "company": "北京维克多冠程教育科技", "industry": "培训/辅导服务", "scale": "20-99人", "city": "北京", "exp": "1-3年", "edu": "本科", "skills": []},
+        {"title": "AI教育项目HRBP", "salary": "15000-25000", "company": "新东方教育科技集团", "industry": "培训/辅导服务", "scale": "10000人以上", "city": "北京", "exp": "3-5年", "edu": "本科", "skills": ["HRBP"]},
+        {"title": "AI教育数据运营实习生", "salary": "150-200元/天", "company": "北京文华学信教育", "industry": "培训/辅导服务", "scale": "500-999人", "city": "北京", "exp": "经验不限", "edu": "本科", "skills": ["大模型"]},
+        {"title": "AI教育产品助理--实习生", "salary": "150-200元/天", "company": "港智科教育科技", "industry": "人工智能", "scale": "20-99人", "city": "东莞", "exp": "经验不限", "edu": "本科", "skills": ["软件产品", "AI产品"]},
+        {"title": "AI数字教育CTO", "salary": "30000-60000", "company": "世纪天鸿教育科技", "industry": "零售/批发", "scale": "500-999人", "city": "杭州", "exp": "10年以上", "edu": "硕士", "skills": ["CTO"]},
+        {"title": "AI产品经验/AI少儿教育负责人", "salary": "20000-40000", "company": "可达鸭教育", "industry": "培训/辅导服务", "scale": "500-999人", "city": "济南", "exp": "经验不限", "edu": "本科", "skills": ["AI产品", "教育"]},
+        {"title": "AI产品经理（B端AI教育方向）", "salary": "16000-25000", "company": "森纵艾数科技", "industry": "人工智能", "scale": "20-99人", "city": "北京", "exp": "3-5年", "edu": "本科", "skills": ["大模型", "AGENT应用落地"]},
+        {"title": "Ai教育应用开发工程师", "salary": "15000-16000", "company": "上海毅学堂智能科技", "industry": "人工智能", "scale": "20-99人", "city": "上海", "exp": "3-5年", "edu": "本科", "skills": ["图像识别产品"]},
+        {"title": "诚聘：AI教育产品经理", "salary": "14000-28000", "company": "南京严慈文化科技", "industry": "新闻/出版", "scale": "20-99人", "city": "南京", "exp": "3-5年", "edu": "本科", "skills": ["大模型", "AIGC", "NLP", "知识图谱", "智能问答"]},
+        {"title": "高级售前工程师（ai教育）", "salary": "15000-25000", "company": "同方鼎欣科技", "industry": "IT服务", "scale": "1000-9999人", "city": "北京", "exp": "5-10年", "edu": "本科", "skills": ["售前"]},
+        {"title": "产品经理（AI教育/政企服务）", "salary": "8000-10000", "company": "湖南远跃科技", "industry": "计算机软件", "scale": "20-99人", "city": "长沙", "exp": "3-5年", "edu": "本科", "skills": ["大模型", "AIGC", "数字虚拟人", "知识图谱", "智能客服", "机器视觉"]},
+        {"title": "资深教研产品经理（AI教育产品方向）", "salary": "18000-30000", "company": "超有爱公司", "industry": "互联网", "scale": "300-499人", "city": "成都", "exp": "3-5年", "edu": "本科", "skills": ["教研"]},
+        {"title": "JAVA架构后端（AI教育方向）", "salary": "13000-18000", "company": "厦门群贤世青研究院", "industry": "培训/辅导服务", "scale": "20-99人", "city": "厦门", "exp": "5-10年", "edu": "大专", "skills": ["JavaScript", "Spring", "MySQL", "Redis"]},
+        {"title": "AI教育产品经理（计算机人工智能本硕）", "salary": "15000-22000", "company": "森纵艾数科技", "industry": "人工智能", "scale": "20-99人", "city": "北京", "exp": "3-5年", "edu": "本科", "skills": ["AI教育产品设计"]},
+        {"title": "学科数据标注（数学）-国际化AI教育产品", "salary": "5000-9000", "company": "字节跳动", "industry": "互联网", "scale": "10000人以上", "city": "济南", "exp": "1-3年", "edu": "本科", "skills": ["数据标注"]}
+      ]
+    },
+    "零售电商": {
+      "keyword": "AI 电商",
+      "total_pages": 5,
+      "collected_pages": 2,
+      "jobs": [
+        {"title": "AI电商运营", "salary": "4000-8000", "company": "商联医药", "industry": "医药批发/零售", "scale": "20-99人", "city": "漯河", "exp": "1-3年", "edu": "大专", "skills": ["淘宝/天猫", "京东", "拼多多"]},
+        {"title": "AI电商设计师", "salary": "8000-15000", "company": "河南网商园电子商务", "industry": "电子商务", "scale": "20-99人", "city": "郑州", "exp": "1-3年", "edu": "本科", "skills": ["AIGC"]},
+        {"title": "AI电商销售（双休+可小白+五险一金）", "salary": "11000-18000", "company": "探迹科技", "industry": "互联网", "scale": "1000-9999人", "city": "上海/北京/广州", "exp": "经验不限", "edu": "大专", "skills": ["企业客户", "AI AGENTS"]},
+        {"title": "AI电商运营岗", "salary": "8000-12000", "company": "中懿(厦门)文旅发展", "industry": "旅游服务", "scale": "100-299人", "city": "苏州", "exp": "1-3年", "edu": "本科", "skills": ["淘宝/天猫", "京东", "拼多多"]},
+        {"title": "AI电商美工", "salary": "6000-8000", "company": "深圳盛世欣兴格力", "industry": "零售/批发", "scale": "100-299人", "city": "深圳", "exp": "经验不限", "edu": "大专", "skills": ["AI", "美工", "电商"]},
+        {"title": "AI电商视频编导", "salary": "5000-8000", "company": "陕西如期而至网络科技", "industry": "新媒体", "scale": "20-99人", "city": "西安", "exp": "1年以下", "edu": "本科", "skills": ["短视频"]},
+        {"title": "AI电商数字人工程师", "salary": "12000-24000", "company": "郑州克酒科技", "industry": "物联网", "scale": "20人以下", "city": "郑州", "exp": "5-10年", "edu": "硕士", "skills": ["大模型"]},
+        {"title": "Shopify独立站运营（AI电商方向)", "salary": "12000-24000", "company": "燊界智联科技", "industry": "贸易/进出口", "scale": "20-99人", "city": "深圳", "exp": "1-3年", "edu": "大专", "skills": ["Shopify", "TikTok", "亚马逊", "KOL", "红人营销"]},
+        {"title": "AI电商视觉设计师", "salary": "10000-15000", "company": "湖南皇凯品牌管理", "industry": "零售/批发", "scale": "300-499人", "city": "长沙", "exp": "1-3年", "edu": "大专", "skills": ["包装设计", "电商设计", "AI", "视觉设计"]},
+        {"title": "（AI）电商美工设计师 双休", "salary": "8000-11000", "company": "杭州兮羽电子商务", "industry": "互联网", "scale": "20-99人", "city": "杭州", "exp": "1-3年", "edu": "大专", "skills": ["淘宝", "天猫", "小红书", "PS", "AI", "CDR"]},
+        {"title": "资深电商设计师/AI视觉设计师", "salary": "8000-16000", "company": "武汉春月堂文化传媒", "industry": "电子商务", "scale": "20-99人", "city": "武汉", "exp": "1-3年", "edu": "大专", "skills": ["PS", "AI", "淘宝", "天猫", "拼多多"]},
+        {"title": "电商AI设计师", "salary": "10000-15000", "company": "杭州奥亦信息科技", "industry": "电子商务", "scale": "300-499人", "city": "杭州", "exp": "1-3年", "edu": "大专", "skills": ["AI设计"]},
+        {"title": "电商AI训练师/培训师", "salary": "6000-10000", "company": "石家庄牧狼人商贸", "industry": "电子商务", "scale": "100-299人", "city": "石家庄", "exp": "1-3年", "edu": "本科", "skills": ["AI电商运营", "AI工具"]},
+        {"title": "AI产品经理/电商C端", "salary": "11000-20000", "company": "外企德科数字技术", "industry": "专业技术服务", "scale": "10000人以上", "city": "深圳", "exp": "3-5年", "edu": "本科", "skills": ["AI产品"]},
+        {"title": "电商美工+AI视频制作专员", "salary": "8000-10000", "company": "惠州市意达米面制品", "industry": "快速消费品", "scale": "100-299人", "city": "东莞", "exp": "1-3年", "edu": "大专", "skills": ["天猫", "京东", "PS", "AI", "短视频制作"]},
+        {"title": "电商运营（AI方向）", "salary": "6000-10000", "company": "江阴市百橙新材料科技", "industry": "新材料", "scale": "20-99人", "city": "无锡", "exp": "经验不限", "edu": "本科", "skills": ["淘宝/天猫", "AI应用", "RPA", "Python"]},
+        {"title": "电商流程与AI效能经理", "salary": "13000-18000", "company": "南京源恩工贸", "industry": "零售/批发", "scale": "20-99人", "city": "南京", "exp": "3-5年", "edu": "本科", "skills": ["流程优化"]},
+        {"title": "电商AI客服训练师", "salary": "10000-15000", "company": "北京卓华尔科技", "industry": "互联网", "scale": "100-299人", "city": "北京", "exp": "1-3年", "edu": "本科", "skills": ["机器人训练师", "标注方法优化"]},
+        {"title": "电商AI产品经理", "salary": "15000-25000", "company": "天津圣西琳食品工业", "industry": "食品/饮料", "scale": "100-299人", "city": "天津", "exp": "3-5年", "edu": "本科", "skills": ["大模型", "AIGC", "电商全链路AI产品"]},
+        {"title": "AI大模型训练师/电商生态链/技术岗", "salary": "10000-20000", "company": "安徽泰盈信息科技", "industry": "电子商务", "scale": "10000人以上", "city": "合肥", "exp": "1-3年", "edu": "本科", "skills": ["Python", "Java", "OpenAI", "ChatGPT", "API"]},
+        {"title": "AI内容工具搭建师（跨境电商方向）", "salary": "10000-15000", "company": "福建传丞数字科技", "industry": "电子商务", "scale": "100-299人", "city": "福州", "exp": "3-5年", "edu": "本科", "skills": ["内容工具", "AI"]}
+      ]
+    },
+    "咨询专业服务": {
+      "keyword": "AI 咨询",
+      "total_pages": 5,
+      "collected_pages": 1,
+      "jobs": [
+        {"title": "ai咨询顾问", "salary": "22000-40000", "company": "广州友田纵横管理咨询", "industry": "IT服务", "scale": "100-299人", "city": "广州", "exp": "5-10年", "edu": "本科", "skills": ["需求分析", "AI解决方案设计", "项目全流程管理", "AI工具培训"]},
+        {"title": "AI解决方案咨询管培生", "salary": "6000-10000", "company": "青岛习远咨询", "industry": "房地产开发", "scale": "500-999人", "city": "青岛", "exp": "经验不限", "edu": "本科", "skills": ["数字化产品", "云计算产品"]},
+        {"title": "AI应用工程师-偏算法", "salary": "30000-45000", "company": "道一企业管理咨询", "industry": "人力资源服务", "scale": "100-299人", "city": "成都", "exp": "5-10年", "edu": "本科", "skills": ["大模型算法", "RAG", "LLM集成"]},
+        {"title": "Ai咨询老师", "salary": "15000-25000", "company": "广州友田纵横管理咨询", "industry": "IT服务", "scale": "100-299人", "city": "广州", "exp": "5-10年", "edu": "本科", "skills": ["AIGC", "咨询顾问", "人工智能"]},
+        {"title": "数据/AI咨询顾问（JG制造）", "salary": "17000-22000", "company": "北京合众伟奇科技", "industry": "计算机软件", "scale": "1000-9999人", "city": "西安/郑州", "exp": "10年以上", "edu": "本科", "skills": ["智能制造", "大模型", "解决方案", "售前咨询", "数据治理"]},
+        {"title": "AI咨询与售前方案经理", "salary": "20000-30000", "company": "中移数智科技", "industry": "咨询服务", "scale": "100-299人", "city": "北京", "exp": "3-5年", "edu": "硕士", "skills": ["数字化产品"]},
+        {"title": "数智化咨询顾问-AI方向", "salary": "6000-12000", "company": "汉得信息", "industry": "计算机软件", "scale": "10000人以上", "city": "上海", "exp": "经验不限", "edu": "本科", "skills": ["企业管理咨询"]},
+        {"title": "AI应用咨询顾问", "salary": "7000-10000", "company": "广州迈络信息科技", "industry": "人工智能", "scale": "20-99人", "city": "广州", "exp": "经验不限", "edu": "本科", "skills": ["企业管理咨询", "AI应用"]},
+        {"title": "财务咨询顾问（AI工具协助）", "salary": "7000-14000", "company": "沈阳财小珠企业管理", "industry": "咨询服务", "scale": "100-299人", "city": "沈阳", "exp": "1-3年", "edu": "大专", "skills": ["财务管理", "企业管理咨询", "会计经验"]},
+        {"title": "咨询顾问（AI方向）", "salary": "10000-15000", "company": "上海浦东人才发展", "industry": "社团/组织", "scale": "100-299人", "city": "上海", "exp": "经验不限", "edu": "硕士", "skills": []},
+        {"title": "咨询顾问（AI解决方案工程师）", "salary": "15000-25000", "company": "中移数智科技", "industry": "咨询服务", "scale": "100-299人", "city": "北京", "exp": "3-5年", "edu": "硕士", "skills": ["数字化产品"]},
+        {"title": "售前咨询师（AI工业制造领域）", "salary": "12000-20000", "company": "广州中科易德科技", "industry": "计算机软件", "scale": "20-99人", "city": "广州", "exp": "5-10年", "edu": "本科", "skills": ["AI工业制造"]},
+        {"title": "ai算力解决方案咨询顾问", "salary": "10000-11000", "company": "成都极云天下科技", "industry": "云计算/大数据", "scale": "20-99人", "city": "成都", "exp": "1-3年", "edu": "本科", "skills": ["云服务产品"]},
+        {"title": "AI开发工程师", "salary": "12000-16000", "company": "上海艾杰飞人才管理咨询", "industry": "咨询服务", "scale": "500-999人", "city": "广州", "exp": "1-3年", "edu": "本科", "skills": []}
+      ]
+    },
+    "医疗健康": {
+      "keyword": "AI 医疗",
+      "total_pages": 5,
+      "collected_pages": 2,
+      "jobs": [
+        {"title": "AI医疗数据标注专员（居家办公）", "salary": "3000-5000", "company": "软通动力", "industry": "互联网", "scale": "10000人以上", "city": "南昌", "exp": "1-3年", "edu": "本科", "skills": ["临床"]},
+        {"title": "产品经理--AI医疗产品", "salary": "15000-30000", "company": "东华医为科技", "industry": "IT服务", "scale": "1000-9999人", "city": "长沙", "exp": "5-10年", "edu": "本科", "skills": ["AI医疗产品"]},
+        {"title": "AI医疗产品售前", "salary": "15000-25000", "company": "佳缘科技", "industry": "网络/信息安全", "scale": "300-499人", "city": "成都", "exp": "3-5年", "edu": "本科", "skills": ["售前"]},
+        {"title": "病理AI产品经理（医疗/B端）", "salary": "6000-8000", "company": "湖南艾方生物科技", "industry": "生物工程", "scale": "100-299人", "city": "长沙", "exp": "3-5年", "edu": "本科", "skills": ["AI产品", "PACS"]},
+        {"title": "AI产品经理（医疗智能审核方向）", "salary": "14000-20000", "company": "辽宁荣科智维云科技", "industry": "IT服务", "scale": "300-499人", "city": "沈阳", "exp": "5-10年", "edu": "本科", "skills": ["智能医疗"]},
+        {"title": "医疗AI大模型算法工程师", "salary": "20000-40000", "company": "爱尔眼科", "industry": "卫生服务", "scale": "10000人以上", "city": "长沙", "exp": "经验不限", "edu": "硕士", "skills": ["大模型算法"]},
+        {"title": "AI应用专家｜医疗信息化｜流程自动化｜Agent开发", "salary": "8000-15000", "company": "天津红桥中都白癜风医院", "industry": "卫生服务", "scale": "100-299人", "city": "天津", "exp": "3-5年", "edu": "本科", "skills": ["Agent", "流程自动化"]},
+        {"title": "医疗AI计算机视觉（CV）工程师", "salary": "20000-40000", "company": "爱尔眼科", "industry": "卫生服务", "scale": "10000人以上", "city": "长沙", "exp": "经验不限", "edu": "硕士", "skills": ["CV"]},
+        {"title": "医疗AI专家/顾问", "salary": "30000-40000", "company": "荣科科技", "industry": "IT服务", "scale": "500-999人", "city": "上海", "exp": "5-10年", "edu": "本科", "skills": ["大模型算法", "Python"]},
+        {"title": "AI图像算法工程师", "salary": "20000-30000", "company": "杭州市人才市场", "industry": "互联网", "scale": "500-999人", "city": "杭州", "exp": "经验不限", "edu": "博士", "skills": ["人工智能图像算法", "Python", "C++"]},
+        {"title": "ai算法工程师(医疗NLP方向）", "salary": "15000-25000", "company": "河南省悉数大数据科技", "industry": "计算机软件", "scale": "20-99人", "city": "郑州", "exp": "3-5年", "edu": "硕士", "skills": ["大模型算法", "NLP", "Python", "搜索/推荐算法"]},
+        {"title": "医疗AI研究员（计算机视觉方向）", "salary": "20000-40000", "company": "爱尔眼科", "industry": "卫生服务", "scale": "10000人以上", "city": "长沙", "exp": "经验不限", "edu": "硕士", "skills": ["计算机视觉"]},
+        {"title": "ai产品经理", "salary": "15000-25000", "company": "青岛英诚未来医疗科技", "industry": "卫生服务", "scale": "20-99人", "city": "青岛", "exp": "5-10年", "edu": "本科", "skills": ["智能医疗", "智能客服", "智能问答"]}
+      ]
+    }
+  }
+}
